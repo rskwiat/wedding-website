@@ -1,0 +1,71 @@
+*{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+$red: #480000;
+$orange: #d84830;
+$orange2: #f09048;
+$orangeYellow: #f09048;
+$yellow: #f0c060;
+
+$spacing-unit: 0.625rem;
+
+@import "_base";
+@import "_layout";
+
+
+body{
+  background: url('../images/rice.jpg');
+}
+
+/**
+  container & layout
+*/
+
+#content{
+  margin-top: ($spacing-unit * 8);
+}
+
+.container{
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-fill{
+  max-width: 800px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/**
+  nav
+*/
+
+nav{
+  background: #000;
+  ul{
+    margin: 0;
+    padding: $spacing-unit 0;
+      li{
+        font-size: 0.813rem;
+        display: inline;
+        margin: 0 $spacing-unit;
+        a{
+          color: #fff;
+          &:hover{
+            font-style: italic;
+            color: $orangeYellow;
+          }
+        }
+      }
+  }
+}

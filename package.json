@@ -5,8 +5,12 @@
   "scripts": {
     "start": "node app.js",
     "dev:server": "nodemon app.js",
-    "build": "npm run build:sass & npm run build:js",
+    "copy": "cp views/index.hbs public/index.html",
+    "build": "npm run copy && npm run build:sass:dev & npm run build:js",
+    "build:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
     "build:js": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
+    "clean": "rm -rf public/index.html",
+    "production": "npm run clean && npm run compile:js && node app.js",
     "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p"
   },
   "dependencies": {
@@ -33,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "node-sass": "^3.8.0",
     "react-router": "^2.6.0"
   }
 }
