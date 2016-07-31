@@ -374,11 +374,20 @@ a {
 body {
   background: url("../images/rice.jpg"); }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Satisfy', cursive;
+  margin: 0 0 1.25rem 0;
+  font-weight: normal; }
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.8; }
+
 /**
   container & layout
 */
 #content {
-  margin-top: 5rem; }
+  background: #fff; }
 
 .container {
   max-width: 1140px;
@@ -390,10 +399,51 @@ body {
   flex-wrap: wrap;
   justify-content: center; }
 
-.container-fill {
-  max-width: 800px;
+.container-about {
+  margin: 2.5rem auto;
+  background: #FFF; }
+
+/**
+  header
+*/
+header {
+  background: url(https://placekitten.com/1000/500) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  color: #fff; }
+  header h1 {
+    font-size: 72px;
+    margin: 0; }
+  header p {
+    margin: 0; }
+
+.date {
   background: #fff;
-  border-radius: 2px; }
+  padding: 1.25rem 0;
+  text-align: center; }
+  .date h2 {
+    margin: 0; }
+  .date span {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+.img-round {
+  border-radius: 360%; }
+
+.profile {
+  padding: 1.25rem;
+  flex: 1 0 33%; }
+  .profile img {
+    display: block;
+    margin: 1.25rem auto; }
+  .profile h2 {
+    text-align: center; }
 
 /**
   nav

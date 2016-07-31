@@ -10,6 +10,7 @@ $orange2: #f09048;
 $orangeYellow: #f09048;
 $yellow: #f0c060;
 
+$baseFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $spacing-unit: 0.625rem;
 
 @import "_base";
@@ -20,12 +21,24 @@ body{
   background: url('../images/rice.jpg');
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Satisfy', cursive;
+  margin: 0 0 ($spacing-unit * 2) 0;
+  font-weight: normal;
+}
+
+p{
+  font-family: $baseFont;
+  line-height: 1.8;
+}
+
 /**
   container & layout
 */
 
 #content{
-  margin-top: ($spacing-unit * 8);
+  // margin-top: ($spacing-unit * 8);
+  background: #fff;
 }
 
 .container{
@@ -40,10 +53,64 @@ body{
   justify-content: center;
 }
 
-.container-fill{
-  max-width: 800px;
+.container-about{
+  margin: ($spacing-unit * 4) auto;
+  background: #FFF;
+}
+
+
+/**
+  header
+*/
+
+header{
+  background: url(https://placekitten.com/1000/500) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  h1{
+    font-size: 72px;
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+.date{
   background: #fff;
-  border-radius: 2px;
+  padding: ($spacing-unit *2) 0;
+  text-align: center;
+  h2{
+    margin :0;
+  }
+  span{
+    font-family: $baseFont;
+  }
+}
+
+
+.img-round{
+  border-radius: 360%;
+}
+
+.profile{
+  padding: ($spacing-unit * 2);
+  flex: 1 0 33%;
+  img{
+    display: block;
+    margin: ($spacing-unit * 2) auto;
+  }
+  h2{
+    text-align: center;
+  }
 }
 
 /**

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Header from '../components/header';
+import Date from '../components/date';
+import About from '../components/about';
 
 export default class Home extends Component{
   render(){
     return(
-      <div className="container container-flex container-fill">
-        <h1>BUY US GIFTS</h1>
+      <div>
+        <Header tagline="Melissa and Rob"/>
+        <Date date="Fall 2018" />
+        <About />
       </div>
     )
   }

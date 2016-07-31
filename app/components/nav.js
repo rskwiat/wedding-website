@@ -10,13 +10,13 @@ export default class Nav extends Component{
             <ul className="menu">
               <li><Link to="/">Our Story</Link></li>
               <li><Link to="/wedding">Wedding</Link></li>
-              <li><Link to="/rsvp">RVSP</Link></li>
+              <li><Link to="/rsvp">RSVP</Link></li>
               <li><Link to="/photos">Photos</Link></li>
-              <li><a href="http://google.com" target="_blank">Registry</a></li>
+              <li><a href="http://www.sokindregistry.org/registry/RobAndMel" target="_blank">Registry</a></li>
             </ul>
           </div>
         </nav>
-        <div id="content">
+        <div id="">
           { this.props.children }
         </div>
       </div>
