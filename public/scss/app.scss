@@ -22,7 +22,7 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Satisfy', cursive;
+  font-family: 'Homemade Apple', cursive;
   margin: 0 0 ($spacing-unit * 2) 0;
   font-weight: normal;
 }
@@ -30,6 +30,8 @@ h1,h2,h3,h4,h5,h6{
 p{
   font-family: $baseFont;
   line-height: 1.8;
+  margin: 0 0 ($spacing-unit * 2) 0;
+  letter-spacing: .5px;
 }
 
 /**
@@ -45,6 +47,7 @@ p{
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 ($spacing-unit * 2);
 }
 
 .container-flex{
@@ -53,9 +56,41 @@ p{
   justify-content: center;
 }
 
+.container-flex-center{
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+  > h1, p{
+    margin: 0;
+  }
+
+}
+
 .container-about{
   margin: ($spacing-unit * 4) auto;
   background: #FFF;
+}
+
+.container-reception{
+  background: #FFF;
+  margin: ($spacing-unit * 4) auto;
+  padding: ($spacing-unit * 2);
+  flex-direction: column;
+  max-width: 800px;
+  text-align: center;
+}
+
+.container-photos{
+    margin: ($spacing-unit * 4) auto;
+
+  padding: ($spacing-unit * 2);
+  flex-direction: column;
+  max-width: 800px;
+  text-align: center;
+  h2{
+    margin: 0;
+  }
 }
 
 
@@ -134,5 +169,17 @@ nav{
           }
         }
       }
+  }
+}
+
+footer{
+  background: #000;
+  padding: $spacing-unit 0;
+  color: #fff;
+  p{
+    margin: 0;
+    a{
+      color: #FFF;
+    }
   }
 }

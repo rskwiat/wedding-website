@@ -375,13 +375,15 @@ body {
   background: url("../images/rice.jpg"); }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Homemade Apple', cursive;
   margin: 0 0 1.25rem 0;
   font-weight: normal; }
 
 p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height: 1.8; }
+  line-height: 1.8;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: .5px; }
 
 /**
   container & layout
@@ -392,16 +394,41 @@ p {
 .container {
   max-width: 1140px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 1.25rem; }
 
 .container-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
+.container-flex-center {
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; }
+  .container-flex-center > h1, .container-flex-center p {
+    margin: 0; }
+
 .container-about {
   margin: 2.5rem auto;
   background: #FFF; }
+
+.container-reception {
+  background: #FFF;
+  margin: 2.5rem auto;
+  padding: 1.25rem;
+  flex-direction: column;
+  max-width: 800px;
+  text-align: center; }
+
+.container-photos {
+  margin: 2.5rem auto;
+  padding: 1.25rem;
+  flex-direction: column;
+  max-width: 800px;
+  text-align: center; }
+  .container-photos h2 {
+    margin: 0; }
 
 /**
   header
@@ -462,3 +489,12 @@ nav {
         nav ul li a:hover {
           font-style: italic;
           color: #f09048; }
+
+footer {
+  background: #000;
+  padding: 0.625rem 0;
+  color: #fff; }
+  footer p {
+    margin: 0; }
+    footer p a {
+      color: #FFF; }
