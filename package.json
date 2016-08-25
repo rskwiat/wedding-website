@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev:server": "nodemon app.js",
+    "dev:server": "npm run clean && nodemon app.js",
     "copy": "cp views/index.hbs public/index.html",
     "build": "npm run copy && npm run build:sass:dev & npm run build:js",
     "build:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "node-sass": "^3.8.0",
-    "react-router": "^2.6.0"
+    "react-router": "^2.6.0",
+    "webpack-dashboard": "0.0.1"
   }
 }

@@ -8,7 +8,7 @@ export default class Home extends Component{
   render(){
     return(
       <div>
-        <Header tagline="Melissa and Rob"/>
+        <Header tagline="Koszer & Skwiat Tie it!"/>
         <Date date="Fall 2018" />
         <About />
         <p>Bridal Party, etc</p>

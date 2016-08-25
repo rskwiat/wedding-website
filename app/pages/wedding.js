@@ -5,8 +5,8 @@ import Header from '../components/header';
 
 
 const coords = {
-  lat: 51.5258541,
-  lng: -0.08040660000006028
+  lat: 42.4167863,
+  lng: -76.5236069
 };
 
 export default class Wedding extends Component{
@@ -57,7 +57,7 @@ export default class Wedding extends Component{
             <InfoWindow
               lat={coords.lat}
               lng={coords.lng}
-              content={'Venue Name'}
+              content={'Butter Milk Falls -- Maybe?'}
               onCloseClick={this.onCloseClick} />
             <Circle
               lat={coords.lat}
