@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "forever start --minUptime 1000 --spinSleepTime 1000 app.js",
     "dev:server": "npm run clean && nodemon app.js",
     "copy": "cp views/index.hbs public/index.html",
     "build": "npm run copy && npm run build:sass:dev & npm run build:js",
@@ -11,7 +11,8 @@
     "build:js": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
     "clean": "rm -rf public/index.html",
     "production": "npm run clean && npm run compile:js && node app.js",
-    "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p"
+    "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
+    "build:images":"node ./node_modules/pngquant-bin/cli.js ./public/images/**.png"
   },
   "dependencies": {
     "babel-core": "^6.11.4",
@@ -24,6 +25,7 @@
     "express": "~4.13.1",
     "google-map-react": "^0.16.3",
     "hbs": "~3.1.0",
+    "imagemin-pngquant": "^5.0.0",
     "morgan": "~1.6.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",

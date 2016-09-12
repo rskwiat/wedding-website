@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, IndexRoute, Link } from 'react-router'
-
-var rsvp = true;
+import Image from './images';
+var rsvp = false;
 
 export default class Nav extends Component{
 
@@ -28,16 +28,20 @@ export default class Nav extends Component{
     } else {
       return(
         <div>
-          <nav>
-            <ul className="menu"></ul>
-          </nav>
+          <div className="container container-center">
+          <Image alt="The Happy Couple"
+            large="./images/wedding-photo@large-fs8.png"
+            medium="./images/wedding-photo@medium-fs8.png"
+            default="./images/wedding-photo@small-fs8.png"
+          />
           <h1>Coming Soon</h1>
-          <p><a href="http://www.sokindregistry.org/registry/RobAndMel" target="_blank">Registry</a></p>
+          <p><a className="registry" href="http://www.sokindregistry.org/registry/RobAndMel" target="_blank">Registry</a></p>
+          </div>
         </div>
       )
     }
   }
-  
+
   render(){
     return(
       <div>

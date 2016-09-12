@@ -12,7 +12,6 @@ export default class Home extends Component{
         <Date date="Fall 2018" />
         <About />
         <p>Bridal Party, etc</p>
-
         <Footer />
       </div>
     )

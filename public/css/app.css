@@ -369,7 +369,11 @@ textarea {
 
 a {
   text-decoration: none;
-  transition: all 450ms ease-in-out; }
+  transition: all 450ms ease-in-out;
+  cursor: pointer; }
+
+.registry {
+  color: #d84830; }
 
 body {
   background: url("../images/rice.jpg"); }
@@ -396,6 +400,9 @@ p {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.25rem; }
+
+.container-center {
+  text-align: center; }
 
 .container-flex {
   display: flex;
@@ -434,8 +441,6 @@ p {
   header
 */
 header {
-  background: url(https://placekitten.com/1000/500) no-repeat;
-  background-size: cover;
   width: 100%;
   height: 500px;
   display: flex;
@@ -459,6 +464,10 @@ header {
     margin: 0; }
   .date span {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+img {
+  width: 100%;
+  max-width: 100%; }
 
 .img-round {
   border-radius: 360%; }
