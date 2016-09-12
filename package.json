@@ -11,7 +11,7 @@
     "build:js": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
     "clean": "rm -rf public/index.html",
     "production": "npm run clean && npm run compile:js && node app.js",
-    "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
+    "compile:js": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
     "build:images":"node ./node_modules/pngquant-bin/cli.js ./public/images/**.png"
   },
   "dependencies": {
