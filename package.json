@@ -12,7 +12,7 @@
     "clean": "rm -rf public/index.html",
     "production": "npm run clean && npm run compile:js && node app.js",
     "compile:js": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
-    "build:images":"node ./node_modules/pngquant-bin/cli.js ./public/images/**.png"
+    "build:images": "node ./node_modules/pngquant-bin/cli.js ./public/images/**.png"
   },
   "dependencies": {
     "babel-core": "^6.11.4",
@@ -32,6 +32,7 @@
     "react-gmaps": "^1.5.0",
     "react-photo-gallery": "^4.2.11",
     "serve-favicon": "~2.3.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "css-loader": "^0.25.0",
     "node-sass": "^3.8.0",
     "react-router": "^2.6.0",
     "webpack-dashboard": "0.0.1"

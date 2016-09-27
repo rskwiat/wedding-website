@@ -5,18 +5,11 @@ var Dashboard = require('webpack-dashboard');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 var dashboard = new Dashboard();
 
+var entry = './app/main.js';
+var path =  __dirname;
+var publicPath = '/';
+var filename = './dist/bundle.js';
 
-if (process.env.NODE_ENV === 'production') {
-  var entry = './app/main.js';
-  var path =  __dirname;
-  var publicPath = '/';
-  var filename = './public/dist/bundle.js';
-} else {
-  var entry = './app/main.js';
-  var path =  __dirname;
-  var publicPath = '/';
-  var filename = './dist/bundle.js';
-}
 
 module.exports = {
   entry: [
@@ -29,10 +22,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        exclude: /node_modules/,
-        loader: 'babel'
-      }
+      { exclude: /node_modules/, loader: 'babel'},
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
   resolve: {

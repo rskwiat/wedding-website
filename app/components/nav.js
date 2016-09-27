@@ -20,7 +20,7 @@ export default class Nav extends Component{
               </ul>
             </div>
           </nav>
-          <div id="">
+          <div>
             { this.props.children }
           </div>
         </div>
