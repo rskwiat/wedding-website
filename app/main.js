@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-import { createHistory } from 'history';
+import { Router, browserHistory } from 'react-router';
 import routes from './routes/routes';
 
+const target = document.getElementById('app');
 
 const Routes = (
   <Router history={browserHistory}>
     { routes }
   </Router>
-)
-
+);
 
 ReactDOM.render((
   Routes
-), document.getElementById('app'))
+), target);

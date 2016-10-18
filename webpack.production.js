@@ -16,6 +16,7 @@ module.exports = {
     publicPath: publicPath,
     filename: filename
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -28,6 +29,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins:[
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
@@ -38,9 +42,5 @@ module.exports = {
         warnings: true
       }
     })
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+  ]
 };

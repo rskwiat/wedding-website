@@ -1,11 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class Date extends Component{
-  render(){
-    return(
+class Date extends Component {
+  render() {
+    const { date } = this.props;
+
+    return (
       <div className="date">
-        <h2>Save the date: <span>{this.props.date}</span></h2>
+        <h2>Save the date: </h2>
+        <span>{date}</span>
       </div>
-    )
+    );
   }
 }
+
+export default Date;

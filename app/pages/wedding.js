@@ -1,19 +1,23 @@
-import React, {PropTypes, Component } from 'react';
-import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
-
-import Header from '../components/header';
-
+import React, { Component } from 'react';
+import { Gmaps, Marker, InfoWindow, Circle } from 'react-gmaps';
 
 const coords = {
-  lat: 42.4167863,
-  lng: -76.5236069
+  lat: 41.667019,
+  lng: -73.9574923
 };
 
-export default class Wedding extends Component{
-
-  constructor(props) {
-    super(props);
+const headerContent = [
+  {
+    copy: 'Ceremony & Reception',
+    key: 'ceremony'
+  },
+  {
+    copy: 'October 27th 2018',
+    key: 'saveTheDate'
   }
+];
+
+class Wedding extends Component {
 
   onMapCreated(map) {
     map.setOptions({
@@ -33,59 +37,69 @@ export default class Wedding extends Component{
     console.log('onClick', e);
   }
 
-  render(){
-    return(
+  contentRender() {
+    return headerContent.map((data) => {
+      return (
+        <h2 key={data.key}>{data.copy}</h2>
+      );
+    });
+  }
+
+
+  render() {
+    return (
       <div>
-        <div className="container container-flex container-reception">
-          <h2>Ceremony &amp; Reception</h2>
-          <h2>Fall 2018</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus odio, venenatis ac libero a, congue vestibulum justo. Quisque fermentum mattis volutpat. Donec eget dignissim nisl. Pellentesque egestas fringilla tincidunt. Curabitur ullamcorper lectus id ligula dapibus iaculis. Aliquam eleifend magna ut justo sagittis iaculis. In vestibulum quis dui ut sagittis. Sed facilisis velit non purus feugiat luctus. Etiam mattis convallis nulla, a cursus nisi sagittis sit amet. Integer fermentum pharetra vehicula. In rhoncus quis ex a congue.</p>
+        <div className="container container-reception">
+          {this.contentRender()}
           <Gmaps
             width={'100%'}
             height={'400px'}
             lat={coords.lat}
             lng={coords.lng}
             zoom={12}
-            loadingMessage={'Wedding Details...'}
-            params={{v: '3.exp', key: 'AIzaSyAtVYppoetdJIYZmsg0z6TJGZf5qVsufk0'}}
-            onMapCreated={this.onMapCreated}>
+            loadingMessage={'Loading Wedding Details...'}
+            params={{ v: '3.exp', key: 'AIzaSyAtVYppoetdJIYZmsg0z6TJGZf5qVsufk0' }}
+            onMapCreated={this.onMapCreated}
+          >
             <Marker
               lat={coords.lat}
               lng={coords.lng}
-              draggable={true}
-              onDragEnd={this.onDragEnd} />
+              draggable
+              onDragEnd={this.onDragEnd}
+            />
             <InfoWindow
               lat={coords.lat}
               lng={coords.lng}
-              content={'Butter Milk Falls -- Maybe?'}
-              onCloseClick={this.onCloseClick} />
+              content={'Buttermilk Falls Inn'}
+              onCloseClick={this.onCloseClick}
+            />
             <Circle
               lat={coords.lat}
               lng={coords.lng}
-              radius={500}
-              onClick={this.onClick} />
+              radius={250}
+            />
           </Gmaps>
-
         </div>
 
-      <div className="container container-flex container-about">
-        <div className="profile">
-          <h2>Guest Information</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium est non feugiat viverra. Quisque facilisis neque a purus lobortis cursus. Phasellus facilisis enim nisl, vel viverra felis maximus vitae. Ut eget dolor ut neque interdum eleifend. Suspendisse potenti. Vestibulum non dui quis ante accumsan viverra vel ac lectus.</p>
+        <div className="container">
+          <div className="row row-flex">
+            <div className="card">
+              <h3>About the Venue</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lacus diam. In pretium bibendum odio gravida iaculis. Integer ut lorem facilisis, lacinia erat sit amet, bibendum tellus. In eget dui vel ex pretium blandit. Etiam id suscipit arcu, sit amet accumsan ex. Curabitur ex tellus, rutrum ut dictum eget, dapibus ac felis. Duis facilisis interdum tincidunt. Donec et nibh elit. Aliquam cursus nibh ut tempus vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum lacinia lectus, vel mollis erat. Aliquam condimentum pellentesque erat, ut rhoncus eros convallis at.</p>
+            </div>
+
+            <div className="card">
+              <h3>Accomdations</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lacus diam. In pretium bibendum odio gravida iaculis. Integer ut lorem facilisis, lacinia erat sit amet, bibendum tellus. In eget dui vel ex pretium blandit. Etiam id suscipit arcu, sit amet accumsan ex. Curabitur ex tellus, rutrum ut dictum eget, dapibus ac felis. Duis facilisis interdum tincidunt. Donec et nibh elit. Aliquam cursus nibh ut tempus vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum lacinia lectus, vel mollis erat. Aliquam condimentum pellentesque erat, ut rhoncus eros convallis at.</p>
+            </div>
+
+          </div>
         </div>
-
-        <div className="profile">
-          <h2>Hotel Accomdations</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium est non feugiat viverra. Quisque facilisis neque a purus lobortis cursus. Phasellus facilisis enim nisl, vel viverra felis maximus vitae. Ut eget dolor ut neque interdum eleifend. Suspendisse potenti. Vestibulum non dui quis ante accumsan viverra vel ac lectus.</p>
-
-        </div>
-
-      </div>
-
-      
 
 
       </div>
-    )
+    );
   }
 }
+
+export { Wedding };
