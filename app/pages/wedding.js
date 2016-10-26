@@ -45,6 +45,10 @@ class Wedding extends Component {
     });
   }
 
+  openMap() {
+    console.log('hello');
+  }
+
 
   render() {
     return (
@@ -56,7 +60,7 @@ class Wedding extends Component {
             height={'400px'}
             lat={coords.lat}
             lng={coords.lng}
-            zoom={12}
+            zoom={14}
             loadingMessage={'Loading Wedding Details...'}
             params={{ v: '3.exp', key: 'AIzaSyAtVYppoetdJIYZmsg0z6TJGZf5qVsufk0' }}
             onMapCreated={this.onMapCreated}
@@ -64,8 +68,6 @@ class Wedding extends Component {
             <Marker
               lat={coords.lat}
               lng={coords.lng}
-              draggable
-              onDragEnd={this.onDragEnd}
             />
             <InfoWindow
               lat={coords.lat}
@@ -85,12 +87,12 @@ class Wedding extends Component {
           <div className="row row-flex">
             <div className="card">
               <h3>About the Venue</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lacus diam. In pretium bibendum odio gravida iaculis. Integer ut lorem facilisis, lacinia erat sit amet, bibendum tellus. In eget dui vel ex pretium blandit. Etiam id suscipit arcu, sit amet accumsan ex. Curabitur ex tellus, rutrum ut dictum eget, dapibus ac felis. Duis facilisis interdum tincidunt. Donec et nibh elit. Aliquam cursus nibh ut tempus vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum lacinia lectus, vel mollis erat. Aliquam condimentum pellentesque erat, ut rhoncus eros convallis at.</p>
+              <p><a href="http://www.buttermilkfallsinn.com/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
             </div>
 
             <div className="card">
               <h3>Accomdations</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lacus diam. In pretium bibendum odio gravida iaculis. Integer ut lorem facilisis, lacinia erat sit amet, bibendum tellus. In eget dui vel ex pretium blandit. Etiam id suscipit arcu, sit amet accumsan ex. Curabitur ex tellus, rutrum ut dictum eget, dapibus ac felis. Duis facilisis interdum tincidunt. Donec et nibh elit. Aliquam cursus nibh ut tempus vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus elementum lacinia lectus, vel mollis erat. Aliquam condimentum pellentesque erat, ut rhoncus eros convallis at.</p>
+              <p>Coming Soon</p>
             </div>
 
           </div>

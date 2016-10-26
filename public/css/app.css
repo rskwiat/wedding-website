@@ -403,13 +403,16 @@ p {
 .card {
   flex: 1;
   background: #fff;
-  margin: 0 1.25rem 1.25rem 1.25rem;
+  margin: 1.25rem 0;
   padding: 1.25rem;
   flex-direction: column;
   display: block; }
   @media (min-width: 640px) {
     .card {
+      margin: 0 1.25rem 1.25rem 1.25rem;
       display: flex; } }
+  .card a {
+    color: #f09048; }
 
 .row-flex-center {
   justify-content: center;

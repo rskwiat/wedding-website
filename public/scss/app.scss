@@ -75,12 +75,17 @@ p{
 .card{
   flex: 1;
   background: #fff;
-  margin: 0 ($spacing-unit * 2) ($spacing-unit * 2) ($spacing-unit * 2);
+  margin: ($spacing-unit * 2) 0;
   padding: ($spacing-unit * 2);
   flex-direction: column;
   display: block;
   @media (min-width: $smallScreen){
+    margin: 0 ($spacing-unit * 2) ($spacing-unit * 2) ($spacing-unit * 2);
     display: flex;
+  }
+
+  a{
+    color: $orangeYellow;
   }
 
 }
@@ -156,6 +161,8 @@ nav{
       }
   }
 }
+
+
 
 footer{
   background: #000;

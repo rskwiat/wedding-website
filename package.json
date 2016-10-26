@@ -30,7 +30,7 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-gmaps": "^1.5.0",
-    "react-router": "^2.6.0",    
+    "react-router": "^2.6.0",
     "react-photo-gallery": "^4.2.11",
     "serve-favicon": "~2.3.0",
     "style-loader": "^0.13.1",
