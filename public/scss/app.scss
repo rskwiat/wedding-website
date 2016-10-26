@@ -1,9 +1,11 @@
-@import "_functions";
-
 *{
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+
+@import "_functions";
+
+
 
 $red: #480000;
 $orange: #d84830;
@@ -24,13 +26,7 @@ $smallScreen: 640px;
 }
 
 body{
-  background: url('../images/rice.jpg');
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Homemade Apple', cursive;
-  margin: 0 0 ($spacing-unit * 2) 0;
-  font-weight: normal;
+  background: url('../images/rice.jpg')
 }
 
 p{
@@ -45,7 +41,6 @@ p{
 */
 
 .content{
-  // margin-top: ($spacing-unit * 8);
   background: #fff;
 }
 

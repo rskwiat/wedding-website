@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/header';
 import Date from '../components/date';
-import About from '../components/about';
 
 class Home extends Component {
   render() {

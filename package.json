@@ -1,52 +1,38 @@
 {
   "name": "wedding-website",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "forever start --minUptime 1000 --spinSleepTime 1000 app.js",
-    "dev:server": "npm run clean && nodemon app.js",
-    "copy": "cp views/index.hbs public/index.html",
-    "build": "npm run copy && npm run build:sass:dev & npm run build:js",
-    "build:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
-    "build:js": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
-    "clean": "rm -rf public/index.html",
-    "production": "npm run clean && npm run compile:js && node app.js",
-    "compile:js": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
-    "build:images": "node ./node_modules/pngquant-bin/cli.js ./public/images/**.png"
+  "devDependencies": {
+    "react-scripts": "0.7.0",
+    "eslint-config-rallycoding": "^3.1.0"
   },
   "dependencies": {
-    "babel-core": "^6.11.4",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.11.1",
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
-    "google-map-react": "^0.16.3",
-    "hbs": "~3.1.0",
-    "imagemin-pngquant": "^5.0.0",
-    "morgan": "~1.6.1",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-gmaps": "^1.5.0",
-    "react-router": "^2.6.0",
-    "react-photo-gallery": "^4.2.11",
-    "serve-favicon": "~2.3.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "react-photo-gallery": "^4.2.14",
+    "react-router": "^3.0.0"
   },
-  "babel": {
-    "presets": [
-      "react",
-      "es2015"
-    ]
+  "scripts": {
+    "start": "react-scripts start & npm run start:sass",
+    "start:sass": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
+    "build": "react-scripts build & npm run build:sass",
+    "build:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css ",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+
+
   },
-  "devDependencies": {
-    "css-loader": "^0.25.0",
-    "eslint-config-rallycoding": "^3.1.0",
-    "node-sass": "^3.8.0",
-    "webpack-dashboard": "0.0.1"
-  }
+  "description": "## Scripts",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rskwiat/wedding-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rskwiat/wedding-website/issues"
+  },
+  "homepage": "https://github.com/rskwiat/wedding-website#readme"
 }
