@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start & npm run start:sass",
     "start:sass": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
-    "build": "react-scripts build & npm run build:sass",
+    "build": "react-scripts build",
     "build:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css ",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
