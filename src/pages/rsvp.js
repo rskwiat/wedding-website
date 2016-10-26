@@ -6,7 +6,7 @@ class RSVP extends Component {
       <div>
         <div className="container container-reception">
           <h1>RSVP</h1>
-          <p>I have no idea how this works...</p>
+          <p>Eventual add an RSVP Form here</p>
         </div>
       </div>
     );
