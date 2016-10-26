@@ -28,10 +28,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugins:[
-    new webpack.optimize.CommonsChunkPlugin('common.js'),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
+  plugins: [
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
