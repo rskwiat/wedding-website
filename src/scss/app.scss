@@ -1,3 +1,5 @@
+@import "./globals/variables.scss";
+
 *{
 	box-sizing: border-box;
 }
@@ -11,7 +13,30 @@ body{
 	margin: 0;
 }
 
-h1,h2,h3{
-	margin: 0;
-	font-family: 'Homemade Apple', cursive;
+.container{
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
+
+.row{
+  padding: 0 1rem;
+}
+
+.row-flex{
+  display: flex;
+  flex-direction: column;
+  @include mediumScreen {
+    flex-direction: row;
+  }
+}
+
+.row-flex > * {
+  flex: 1;
+  @include mediumScreen {
+    margin: 0 1rem;
+  }
+}
+
+@import 'globals/typography';
