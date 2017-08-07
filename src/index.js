@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import WebFont from 'webfontloader';
-import App from './App';
+
+import App from './components/app';
+import './scss/app.scss';
 
 WebFont.load({
   google: {
-    families: ['Homemade Apple']
+    families: ['Homemade Apple', 'Montserrat']
   }
 });
 
+const target = document.getElementById('root');
+
 ReactDOM.render((
-  <App />
-), document.getElementById('root'));
+	<Router>
+	  <App />
+	</Router>
+), target);
