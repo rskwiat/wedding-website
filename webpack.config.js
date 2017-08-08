@@ -8,7 +8,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const VENDOR_LIBS = [
   'react',
   'react-dom',
-  'react-router'
+  'react-router',
+  'classnames'
 ];
 
 const config = {

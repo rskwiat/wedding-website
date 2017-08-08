@@ -1,10 +1,5 @@
 import React from 'react';
-import classNames from 'classnames'
-
-const styles = {
-  base: classNames('container'),
-  gridStyle: classNames('row', 'row-flex')
-};
+import styles from '../styles';
 
 const Home = () => {
 	return (
