@@ -1,53 +1,8 @@
-@import "./globals/variables.scss";
+@import 'globals/variables';
+@import 'components/body'
 
-*{
-	box-sizing: border-box;
-}
-
-html{
-	font-size: 62.5%;
-}
-
-body{
-	font-family: 'Montserrat', sans-serif;
-	margin: 0;
-  color: #333;
-}
-
-.container{
-  max-width: 1040px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.row{
-  padding: 2rem 1rem;
-}
-
-.row-flex{
-  display: flex;
-  flex-direction: column;
-  @include mediumScreen {
-    flex-direction: row;
-  }
-}
-
-.row-flex > .item {
-  flex: 1;
-  @include mediumScreen {
-    margin: 0 1rem;
-  }
-}
+@import 'components/grid';
 
 @import 'globals/typography';
 @import 'globals/footer';
-
-.error{
-  width: 100%;
-  height: 75vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import 'components/error';

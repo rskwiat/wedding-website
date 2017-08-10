@@ -1,0 +1,25 @@
+.container{
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row{
+  padding: 2rem 1rem;
+}
+
+.row-flex{
+  display: flex;
+  flex-direction: column;
+  @include mediumScreen {
+    flex-direction: row;
+  }
+}
+
+.row-flex > .item {
+  flex: 1;
+  @include mediumScreen {
+    margin: 0 1rem;
+  }
+}
