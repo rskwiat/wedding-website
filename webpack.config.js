@@ -6,10 +6,11 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
+  'classnames',
+  'prop-types',
   'react',
-  'react-dom',
-  'react-router',
-  'classnames'
+  'react-router-dom',
+  'webfontloader',
 ];
 
 const config = {

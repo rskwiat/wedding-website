@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from './navigation';
 import Footer from './footer';
 import routes from '../routes';
-// import classNames from 'classnames';
 
 const App = () => {
 	return (
@@ -11,7 +10,9 @@ const App = () => {
 			<Navigation />
 			{ routes }
       <Footer 
-        copyright="test"
+        copyright="&copy; 2017 Koszer Skwiat Tie it"
+        builtBy="The Groom"
+        email="rskwiat@gmail.com"
       />
 		</div>
 	);

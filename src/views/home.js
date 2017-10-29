@@ -1,10 +1,9 @@
 import React from 'react';
-import styles from '../styles';
 
 const Home = () => {
 	return (
-		<div className={styles.base}>
-      <div className={styles.gridStyle}>
+		<div className="container">
+      <div className="row row-flex">
         <div>
         home
         </div>
@@ -14,7 +13,6 @@ const Home = () => {
       <div>
         home
         </div>
-
       </div>
 		</div>
 	);

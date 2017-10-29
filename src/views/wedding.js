@@ -2,7 +2,7 @@ import React from 'react';
 
 const Wedding = () => {
   return (
-    <div>
+    <div className="container">
       Wedding
     </div>
   );

@@ -7,8 +7,7 @@ import {
 import Home from '../views/home';
 import Wedding from '../views/wedding';
 import Photos from '../views/photos';
-import RSVP from '../views/rsvp';
-import Error from '../views/error';
+import Rsvp from '../views/rsvp';
 
 export default (
   <div>
@@ -16,8 +15,8 @@ export default (
       <Route exact path="/" component={Home} />
       <Route path="/wedding" component={Wedding} />
       <Route path="/photos" component={Photos} />
-      <Route path="/rsvp" component={RSVP} />
-      <Route path="*" component={Error} />
+      <Route path="/rsvp" component={Rsvp} />
+      <Route path="*" component={Home} />
     </Switch>
   </div>
 );

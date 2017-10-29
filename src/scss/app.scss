@@ -1,8 +1,32 @@
 @import 'globals/variables';
-@import 'components/body'
 
+@import 'components/body';
 @import 'components/grid';
+
+nav {
+	background: #000;
+	display: flex;
+	justify-content: center;
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			margin: 0 1rem;
+			display: inline;
+			a {
+				color: blue;
+				&:hover {
+					color: orange;
+				}
+			}
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: color 350ms ease-in-out;
+}
 
 @import 'globals/typography';
 @import 'globals/footer';
-@import 'components/error';

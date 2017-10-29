@@ -1,21 +1,14 @@
 import React from 'react';
-import styles from '../styles';
 
-const Footer = ({ copyright }) => {
-  return (
-    <footer>
-      <div className={styles.base}>
-        <div className={styles.gridStyle}>
-          <div className="item">
-            <p>{copyright}</p>
-          </div>
-                    <div className="item">
-            <p>{copyright}</p>
-          </div>
-        </div>
+const Footer = ({ copyright, builtBy, email }) => (
+  <footer>
+    <div className="container">
+      <div className="row">
+        <p>{copyright}</p>
+        <p>Built By: <a href={`mailto:${email}`}>{builtBy}</a></p>
       </div>
-    </footer>
-  )
-}
+    </div>
+  </footer>
+);
 
 export default Footer;

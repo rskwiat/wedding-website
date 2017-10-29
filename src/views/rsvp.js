@@ -1,11 +1,11 @@
 import React from 'react';
 
-const RSVP = () => {
+const Rsvp = () => {
   return (
-    <div>
+    <div className="container">
       RSVP
     </div>
   );
 }
 
-export default RSVP;
+export default Rsvp;
