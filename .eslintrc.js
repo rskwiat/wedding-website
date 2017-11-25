@@ -1,14 +1,16 @@
-{
+module.exports = {
   parser: 'babel-eslint',
   rules: {
     indent: [
+      2,
+      2,
       {
         SwitchCase: 1
       },
     ],
     'comma-dangle': [
-      2,
-      'never',
+      1,
+      'always-multiline',
     ],
     quotes: [
       2,
@@ -56,4 +58,4 @@
   plugins: [
     'react',
   ],
-}
+};

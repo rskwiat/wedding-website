@@ -6,6 +6,6 @@ const Rsvp = () => {
       RSVP
     </div>
   );
-}
+};
 
 export default Rsvp;

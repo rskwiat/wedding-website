@@ -6,6 +6,6 @@ const Photos = () => {
       Photos
     </div>
   );
-}
+};
 
 export default Photos;

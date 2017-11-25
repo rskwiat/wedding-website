@@ -1,21 +1,17 @@
 import React from 'react';
+import SaveTheDate from '../components/save-the-date';
+import OurStory from '../components/our-story';
 
 const Home = () => {
-	return (
-		<div className="container">
-      <div className="row row-flex">
-        <div>
-        home
-        </div>
-      <div>
-        <p>home</p>
-        </div>
-      <div>
-        home
-        </div>
-      </div>
-		</div>
-	);
-}
+  return (
+    <div className="home-page page">
+      <SaveTheDate 
+        date="October 27, 2018"
+        location="Milton, New York"
+      />
+      <OurStory />
+    </div>
+  );
+};
 
 export default Home;

@@ -1,22 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import nav from '../routes/nav';
+import React, { Component } from 'react';
+import NavLink from './navigationLink';
+import Proptypes from 'prop-types';
 
-const Navigation = () => {
-	return (
-		<nav>
-			<ul>
-			{ nav.map(function(item, i) {
-					return (
-						<li key={i}>
-							<Link to={item.url}>{item.title}</Link>
-						</li>
-					);
-				})
-			}
-			</ul>
-		</nav>
-	)
-}; 
+class Navigation extends Component {
+  //finish this up...
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+  }
+
+  render() {
+    return (
+      <nav>
+        <ul className="desktopNav">
+          <NavLink title="Home" url="/" />
+          <NavLink title="Wedding" url="/wedding" />
+          <NavLink mobile="hidden" title="Photos" url="/photos" />
+          <NavLink mobile="hidden" title="RSVP" url="/rsvp" />
+          <li>
+            <a 
+              href="https://sokindregistry.org/registry/RobAndMel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Registry
+            </a>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+Navigation.propTypes = {
+  state: Proptypes.bool,
+};
 
 export default Navigation;

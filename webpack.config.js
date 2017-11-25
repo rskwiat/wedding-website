@@ -38,6 +38,16 @@ const config = {
           { loader: 'sass-loader' }
         ])
       },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: { limit: 40000 }
+          },
+          'image-webpack-loader'
+        ]
+      }
 		]
 	},
   plugins: [

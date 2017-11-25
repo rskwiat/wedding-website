@@ -8,7 +8,7 @@ import './scss/app.scss';
 
 WebFont.load({
   google: {
-    families: ['Homemade Apple', 'Montserrat']
+    families: ['Homemade Apple']
   }
 });
 

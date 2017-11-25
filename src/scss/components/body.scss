@@ -7,7 +7,12 @@ html {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	margin: 0;
+  font-family: $base-font;
+  font-weight: 300;
+  margin: 0;
   color: #333;
+}
+
+.page {
+	padding-top: 6rem;
 }

@@ -6,10 +6,7 @@
 }
 
 .row {
-  padding: 2rem 1rem;
-}
-
-.row-flex {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   @include mediumScreen {
@@ -17,9 +14,9 @@
   }
 }
 
-.row-flex > .item {
+.row > .item {
   flex: 1;
   @include mediumScreen {
-    margin: 0 1rem;
+    margin: 0 -2rem;
   }
 }
