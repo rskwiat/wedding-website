@@ -4,6 +4,7 @@ import Proptypes from 'prop-types';
 
 class Navigation extends Component {
   //finish this up...
+  
   constructor(props) {
     super(props);
     this.state = {
