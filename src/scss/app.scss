@@ -1,8 +1,5 @@
 @import 'globals/variables';
 
-@import 'components/body';
-@import 'components/grid';
-
 nav .hidden {
 	display: none;
   @include mediumScreen {
@@ -56,7 +53,3 @@ a {
 	transition: color 350ms ease-in-out;
 }
 
-@import 'components/save-the-date';
-@import 'globals/headers';
-@import 'globals/typography';
-@import 'globals/footer';

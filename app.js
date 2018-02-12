@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-if (ENV !== 'production') {
+if (ENV === 'development') {
   app.use(webpackDevMiddleware(webpack(webpackConfig)));
 }
 
