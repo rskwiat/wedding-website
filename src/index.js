@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
+import App from './components/app';
 import reducers from './reducers';
 
 const middleware = [thunk];
@@ -15,12 +16,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 const store = createStore(
   reducers, {}, applyMiddleware(...middleware)
-);
-
-const App = () => (
-  <div>
-    <h1>Working App</h1>
-  </div>
 );
 
 ReactDOM.render(
