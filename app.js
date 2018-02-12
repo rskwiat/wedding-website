@@ -10,7 +10,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackConfig = require('./webpack.config');
 
 const app = express();
-const ENV = proccess.env.NODE_ENV;
+const ENV = process.env.NODE_ENV;
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
