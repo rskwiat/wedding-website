@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const chalk = require('chalk');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
@@ -60,17 +58,8 @@ const config = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new ProgressBarPlugin({
-    	format: '  build [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)',
-      clear: false,
-    }),
 		new ExtractTextPlugin('app.[chunkhash].css')
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    port: 3000
-  }
+  ]
 };
 
 module.exports = config;
