@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import NavLink from './navigationLink';
 import Proptypes from 'prop-types';
+import NavLink from './navigationLink';
+
 
 class Navigation extends Component {  
   constructor(props) {

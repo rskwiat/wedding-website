@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import * as actions from '../actions';
 
 class Home extends Component {
@@ -26,6 +28,11 @@ function mapStateToProps(state) {
   return {
     location: state.location
   };
+}
+
+Home.propTypes = {
+  fetchLocation: PropTypes.func.isRequired,
+  location: PropTypes.object
 }
 
 export default connect(mapStateToProps, actions)(Home);
