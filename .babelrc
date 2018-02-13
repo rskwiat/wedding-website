@@ -1,7 +1,10 @@
 { 
 	"presets": [
-		"react", 
-		"es2015"
+    "env",
+		"react"
 	],
-	"compact" : true
+  "plugins": [
+    "transform-async-to-generator"
+  ],
+	"compact": true
 }

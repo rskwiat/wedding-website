@@ -1,7 +1,32 @@
 @import 'globals/variables';
 
-@import 'components/body';
-@import 'components/grid';
+* { 
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	color: $gray-text;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Sanchez', serif;
+  margin: 0 0 2rem 0;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* Navigation Styling */
 
 nav .hidden {
 	display: none;
@@ -11,13 +36,14 @@ nav .hidden {
 }
 
 nav {
-	background: #FFF;
+	background: $white;
 	display: flex;
 	box-shadow: 0 2px 5px rgba(0,0,0,.25);
 	overflow: hidden;
 	position: fixed;
 	z-index: 5;
 	width: 100%;
+	top: 0;
 	justify-content: center;
 	ul {
 		list-style: none;
@@ -26,8 +52,9 @@ nav {
 		li {
 			margin: 0 1rem;
 			display: inline;
+			font-size: 1.4rem;
 			a {
-				color: #666;
+				color: $gray;
 				position: relative;
 				&:hover {
 					color: $orange;
@@ -44,7 +71,7 @@ nav {
 					overflow: hidden;
 			    border-bottom: 2px solid $orange;
     			transform: translateY(1rem);
-					transition: transform 350ms ease-in;
+					transition: transform 250ms ease-in;
 				}
 			}
 		}
@@ -56,7 +83,33 @@ a {
 	transition: color 350ms ease-in-out;
 }
 
-@import 'components/save-the-date';
-@import 'globals/headers';
-@import 'globals/typography';
-@import 'globals/footer';
+
+
+
+footer {
+	background: url('../images/footer.jpg') center center no-repeat;
+	background-size: cover;
+	display: flex;
+	padding: 10rem 0;
+	text-align: center;
+	color: $white;
+	text-shadow: 0px 3px 6px rgba(0, 0, 0, .75);
+	a{
+		color: $white;
+		&:hover {
+			color: $orange;
+		}
+	}
+
+	h2 {
+		font-size: 3rem
+	}
+
+	h3{
+		font-size: 2.4rem;
+	}
+
+	p {
+		font-size: 1.4rem;
+	}
+}

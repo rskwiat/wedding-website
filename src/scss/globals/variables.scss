@@ -3,6 +3,9 @@ $large: 992px;
 $base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $orange: rgb(234, 128, 51);
+$white: #FFF;
+$gray-text: #333;
+$gray: #666;
 
 @mixin mediumScreen {
   @media (min-width: #{$medium}) {

@@ -1,34 +1,40 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const chalk = require('chalk');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
-  'classnames',
-  'prop-types',
   'react',
-  'react-router-dom',
-  'webfontloader',
+  'react-dom',
 ];
+
+const ENTRY = {
+  app: path.resolve('./src/index.js'),
+};
+
+const PATHS = {
+  build: path.join(__dirname, './public')
+}
 
 const config = {
 	entry: {
-    bundle: './src/index.js',
+    bundle: ENTRY.app,
     vendor: VENDOR_LIBS
   },
 	output: {
-		path: path.join(__dirname, './build'),
+		path: PATHS.build,
 		publicPath: '/',
     filename: '[name].[chunkhash].js'
 	},
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.scss']
+  },
 	module: {
 		rules: [
 		  {
         use: 'babel-loader',
-        test: /\.js$/,
-        exclude: /\node_modules/
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|images|css)/
       },
       {
         test: /\.scss$/,
@@ -51,6 +57,7 @@ const config = {
 		]
 	},
   plugins: [
+    new ExtractTextPlugin('style.[chunkhash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),
@@ -60,17 +67,7 @@ const config = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new ProgressBarPlugin({
-    	format: '  build [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)',
-      clear: false,
-    }),
-		new ExtractTextPlugin('app.[chunkhash].css')
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    port: 3000
-  }
+  ]
 };
 
 module.exports = config;

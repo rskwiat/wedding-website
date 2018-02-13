@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Footer component 1`] = `
+<footer>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <h2>
+        Thank You!
+      </h2>
+      <h3>
+        Melissa & Robert
+      </h3>
+      <p>
+        Copyright 
+        2018
+         | Designed By: 
+        <a
+          href="mailto:rskwiat@gmail.com"
+        >
+          Testing
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+`;
