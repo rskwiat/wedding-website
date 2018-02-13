@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
+const apiRoutes = require('./routes/apiRoutes');
 const webpackConfig = require('./webpack.config');
 
 const app = express();
@@ -22,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 if (ENV === 'development') {
   app.use(webpackDevMiddleware(webpack(webpackConfig)));
 }
+
+app.use('/api', apiRoutes);
 
 app.get('*', (request, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));

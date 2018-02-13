@@ -5,9 +5,17 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
+import WebFont from 'webfontloader';
 
-import App from './components/app';
+import './scss/app.scss';
+import App from './App';
 import reducers from './reducers';
+
+WebFont.load({
+  google: {
+    families: ['Sanchez']
+  }
+});
 
 const middleware = [thunk];
 if (process.env.NODE_ENV !== 'production') {

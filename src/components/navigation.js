@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import NavLink from './navigationLink';
 import Proptypes from 'prop-types';
 
-class Navigation extends Component {
-  //finish this up...
-  
+class Navigation extends Component {  
   constructor(props) {
     super(props);
     this.state = {

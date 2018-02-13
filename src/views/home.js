@@ -1,17 +1,31 @@
-import React from 'react';
-import SaveTheDate from '../components/save-the-date';
-import OurStory from '../components/our-story';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-const Home = () => {
-  return (
-    <div className="home-page page">
-      <SaveTheDate 
-        date="October 27, 2018"
-        location="Milton, New York"
-      />
-      <OurStory />
-    </div>
-  );
-};
+class Home extends Component {
 
-export default Home;
+  componentDidMount() {
+    const { fetchLocation } = this.props;
+    fetchLocation();
+  }
+
+  render() {
+    const { date, venue, city } = this.props.location;
+    return (
+      <div className="home-page page">
+        {date}
+        {venue}
+        {city}
+      </div>
+    );
+  }
+
+}
+
+function mapStateToProps(state) {
+  return {
+    location: state.location
+  };
+}
+
+export default connect(mapStateToProps, actions)(Home);
