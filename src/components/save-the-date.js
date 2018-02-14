@@ -1,16 +1,14 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-const SaveTheDate = ({ date, location }) => (
+const SaveTheDate = ({ date, location, city }) => (
   <div className="save-the-date">
-    <div className="container">
-      <div className="row">
-        <div className="item">
-          <p className="save">Save</p>
-          <p className="the-date">The Date</p>
-          <h1 className="date">{date}</h1>
-          <p className="location">{location}</p>
-        </div>
+    <div className="overlay">
+      <div className="container">
+        <p>{date}</p>
+        <h2>Save <span>the</span> Date</h2>
+        <h3>Melissa &amp; Robert</h3>
+        <p>{location} - {city}</p>
       </div>
     </div>
   </div>
@@ -19,7 +17,7 @@ const SaveTheDate = ({ date, location }) => (
 SaveTheDate.propTypes = {
   date: Proptypes.string,
   location: Proptypes.string,
+  city: Proptypes.string,
 };
-
 
 export default SaveTheDate;

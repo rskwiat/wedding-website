@@ -7,6 +7,9 @@ module.exports = {
   'env': {
     'browser': true,
     'node': true
+  },
+  'rules': {
+    "react/require-extension": "off"
   }
 }
 

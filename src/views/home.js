@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import SaveTheDate from '../components/save-the-date';
 import * as actions from '../actions';
 
 class Home extends Component {
@@ -15,9 +16,7 @@ class Home extends Component {
     const { date, venue, city } = this.props.location;
     return (
       <div className="home-page page">
-        {date}
-        {venue}
-        {city}
+        <SaveTheDate date={date} location={venue} city={city} />
       </div>
     );
   }
