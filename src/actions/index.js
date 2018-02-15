@@ -1,5 +1,6 @@
 import {
   FETCH_LOCATION,
+  FETCH_STORY,
 } from './types';
 
 export const fetchLocation = () => async (dispatch) => {
@@ -10,3 +11,12 @@ export const fetchLocation = () => async (dispatch) => {
     payload: data
   });
 };
+
+export const fetchStory = () => async (dispatch) => {
+  const res = await fetch('/api/story');
+  const data = await res.json();
+  dispatch({ 
+    type: FETCH_STORY, 
+    payload: data
+  });
+}
