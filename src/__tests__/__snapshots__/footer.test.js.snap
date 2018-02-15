@@ -5,26 +5,22 @@ exports[`Testing Footer component 1`] = `
   <div
     className="container"
   >
-    <div
-      className="row"
-    >
-      <h2>
-        Thank You!
-      </h2>
-      <h3>
-        Melissa & Robert
-      </h3>
-      <p>
-        Copyright 
-        2018
-         | Designed By: 
-        <a
-          href="mailto:rskwiat@gmail.com"
-        >
-          Testing
-        </a>
-      </p>
-    </div>
+    <h2>
+      Thank You!
+    </h2>
+    <h3>
+      Melissa & Robert
+    </h3>
+    <p>
+      Copyright 
+      2018
+       | Designed By: 
+      <a
+        href="mailto:rskwiat@gmail.com"
+      >
+        The Groom
+      </a>
+    </p>
   </div>
 </footer>
 `;

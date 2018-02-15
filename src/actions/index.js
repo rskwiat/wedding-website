@@ -5,7 +5,13 @@ import {
 
 export const fetchLocation = () => async (dispatch) => {
   const res = await fetch('/api/location');
+  res.setRequestHeader({
+    credentials: 'same-origin',
+    method: 'GET'
+  });
+  console.log(res);
   const data = await res.json();
+
   dispatch({ 
     type: FETCH_LOCATION, 
     payload: data

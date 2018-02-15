@@ -8,7 +8,7 @@ import Footer from '../components/footer';
 test('Testing Footer component', () => {
 
   const component = renderer.create(
-    <Footer copyright="2018" builtBy="Testing" email="rskwiat@gmail.com" />,
+    <Footer copyright="2018" builtBy="The Groom" email="rskwiat@gmail.com" />,
   );
 
   let tree = component.toJSON();
