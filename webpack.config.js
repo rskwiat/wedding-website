@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,7 +15,7 @@ const ENTRY = {
 };
 
 const PATHS = {
-  build: path.join(__dirname, './public')
+  build: path.join(__dirname, './public'),
 }
 
 const config = {
@@ -31,7 +33,7 @@ const config = {
   },
 	module: {
 		rules: [
-		  {
+      {
         use: 'babel-loader',
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|images|css)/

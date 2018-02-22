@@ -1,19 +1,16 @@
 import React from 'react';
+import Proptypes from 'prop-types';
+
 import PageHeader from '../components/page-header';
 
-const Wedding = () => {
-  return (
-    <div>
-      <PageHeader 
-        page="wedding" 
-        date="October 27, 2018"
-        location="Milton, New York"
-      />
-      <div className="container">
-        Wedding
-      </div>
-    </div>
-  );
+const Wedding = ({ pageId }) => (
+  <div className={`${pageId}-page page`}>
+    <PageHeader />
+  </div>
+);
+
+Wedding.propTypes = {
+  pageId: Proptypes.string
 };
 
 export default Wedding;

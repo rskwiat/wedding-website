@@ -63,7 +63,6 @@ p {
 		font-size: 3rem;
 		margin: 0 0 1rem 0;
 	}
-
 }
 
 .overlay {
@@ -71,6 +70,31 @@ p {
 	width: 100%;
   background: rgba(0,0,0, .5);
   background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.2));
+}
+
+
+/* Header Styling */
+
+header {
+	margin-top: 5.5rem;
+	background: #ccc;
+	padding: 4rem 0;
+	text-align: center;
+	text-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+
+	.container {
+		padding: 0 2rem;
+	}
+	
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 2.4rem; 
+		margin: 0;
+	}
+
 }
 
 
@@ -93,6 +117,7 @@ nav {
 	width: 100%;
 	top: 0;
 	justify-content: center;
+	height: 6rem;
 	ul {
 		list-style: none;
 		padding: 0 1rem 0 0;

@@ -16,8 +16,8 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
-        <Route exact path="/" component={Home} />
-        <Route path="/wedding" component={Wedding} />
+        <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
+        <Route path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
         <Route path="/photos" component={Photos} />
         <Route path="/rsvp" component={Rsvp} />
       <Footer
