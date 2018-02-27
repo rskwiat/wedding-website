@@ -9,7 +9,8 @@ import Footer from './components/footer';
 
 import Home from './views/home';
 import Wedding from './views/wedding';
-import Photos from './views/photos'
+import Photos from './views/photos';
+import Registry from './views/registry';
 import Rsvp from './views/rsvp';
 
 const App = () => (
@@ -18,8 +19,9 @@ const App = () => (
       <Navigation />
         <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
         <Route path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
-        <Route path="/photos" component={Photos} />
-        <Route path="/rsvp" component={Rsvp} />
+        <Route path="/photos" render={(props) => <Photos {...props} pageId="photos" />} />
+        <Route path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
+        <Route path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
       <Footer
         copyright="2018"
         email="rskwiat@gmail.com"

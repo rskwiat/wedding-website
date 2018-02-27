@@ -4,6 +4,8 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const chalk = require('chalk');
 
 const VENDOR_LIBS = [
   'react',
@@ -63,6 +65,13 @@ const config = {
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),
+    new ProgressBarPlugin({
+      format: `build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`
+    }),
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 15
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),

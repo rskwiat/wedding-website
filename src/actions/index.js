@@ -4,7 +4,7 @@ import {
 } from './types';
 
 export const fetchLocation = () => async (dispatch) => {
-  const res = await fetch('/api/location');
+  const res = await fetch('/api/location', { method: 'GET' });
   const data = await res.json();
 
   dispatch({ 
@@ -14,10 +14,22 @@ export const fetchLocation = () => async (dispatch) => {
 };
 
 export const fetchStory = () => async (dispatch) => {
-  const res = await fetch('/api/story');
+  const res = await fetch('/api/story', { method: 'GET' });
   const data = await res.json();
   dispatch({ 
     type: FETCH_STORY, 
     payload: data
   });
 }
+
+export const submitForm = (data) => {
+  fetch('/api/rsvp', { 
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+}
+

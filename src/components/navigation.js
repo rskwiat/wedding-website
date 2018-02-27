@@ -8,15 +8,7 @@ const Navigation = () => (
       <NavLink title="Wedding" url="/wedding" />
       <NavLink title="Photos" url="/photos" />
       <NavLink title="RSVP" url="/rsvp" />
-      <li>
-        <a 
-          href="https://sokindregistry.org/registry/RobAndMel" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          Registry
-        </a>
-      </li>
+      <NavLink title="Registry" url="/registry" />
     </ul>
   </nav>
 );

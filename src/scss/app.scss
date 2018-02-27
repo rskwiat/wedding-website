@@ -25,24 +25,52 @@ p {
 	line-height: 1.9;
 }
 
+.img-responsive {
+	width: 100%;
+	max-width: 100%;
+}
+
 .container {
 	max-width: 1140px;
 	margin: 0 auto;
 	position: relative;
 }
 
+.container-small {
+	max-width: 800px;
+	margin: 10rem auto 0;
+}
+
+.row {
+	padding: 0 2rem;
+}
+
+.flex-row {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	@media (min-width: 768px) {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
 /* Save the Date */
 
 .save-the-date {
-	background: url('../images/footer.jpg') center center no-repeat;
-
-	height: calc(100vh - 25px);
+	background: url('../images/welcome-photo-hd.jpg') 65% 0 no-repeat;
+	background-size: cover;
+	height: calc(75vh - 25px);
 	display: flex;
 	align-items: flex-end;
 	color: $white;
 	text-align: center;
 	overflow: hidden;
 	text-shadow: 0px 3px 6px rgba(0, 0, 0, .75);
+
+	@media (min-width: 768px) {
+		background-position: center center;
+	}
 
 	p {
 		font-size: 2rem;
@@ -76,11 +104,13 @@ p {
 /* Header Styling */
 
 header {
-	margin-top: 5.5rem;
-	background: #ccc;
+	margin: 5.5rem 0 10rem 0;
+	background: url('../images/banner.jpg') center center no-repeat;
+	background-size: cover;
 	padding: 4rem 0;
+	color: $white;
 	text-align: center;
-	text-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
+	text-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
 
 	.container {
 		padding: 0 2rem;
@@ -156,8 +186,55 @@ a {
 	transition: color 350ms ease-in-out;
 }
 
+.our-story {
+	h2 {
+		font-size: 2.8rem;
+		text-align: center;
+		margin: 0 0 2.5rem 0;
+		padding: 0 0 2.5rem 0;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
+	}
+}
+
+.registry-card {
+	border: 1px solid rgba(0,0,0,0.3);
+	padding: 2rem;
+	box-shadow: 0 2rem 2rem rgba(0,0,0,0.08);
+	flex: 1;
+	margin: 0 0 5rem 0;
+	border-radius: 1rem;
+	@media (min-width: 768px) {
+		margin: 0 5rem 0 0rem;
+		max-width: 40%;
+	}
+
+	&:last-child {
+		margin: 0;
+	}
+
+	.logo {
+		margin: 0 0 2rem 0;
+	}
+}
+
+.btn {
+	background: $orange;
+	display: inline-block;
+	color: $white;
+	width: 100%;
+	text-align: center;
+	border-radius: 1rem;
+	padding: 2.4rem 1.2rem;
+	font-size: 2rem;
+	transition: background 350ms ease-in-out;
+	&:hover{
+		background: darken($orange, 15%);
+	}
+}
+
 
 footer {
+	margin-top: 10rem;
 	background: url('../images/footer.jpg') center center no-repeat;
 	background-size: cover;
 	display: flex;
