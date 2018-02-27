@@ -9,6 +9,7 @@ class Form extends Component {
 
     this.state = {
       'name': '',
+      'attending': false,
       'dinner': [
         'steak': false,
         'chicken': false,
