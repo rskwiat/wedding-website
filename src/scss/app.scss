@@ -38,7 +38,7 @@ p {
 
 .container-small {
 	max-width: 800px;
-	margin: 10rem auto 0;
+	margin: 8rem auto 0;
 }
 
 .row {
@@ -104,7 +104,7 @@ p {
 /* Header Styling */
 
 header {
-	margin: 5.5rem 0 10rem 0;
+	margin: 5.5rem 0 8rem 0;
 	background: url('../images/banner.jpg') center center no-repeat;
 	background-size: cover;
 	padding: 4rem 0;
@@ -205,7 +205,7 @@ a {
 	border-radius: 1rem;
 	@media (min-width: 768px) {
 		margin: 0 5rem 0 0rem;
-		max-width: 40%;
+		max-width: 25%;
 	}
 
 	&:last-child {
@@ -223,22 +223,130 @@ a {
 	color: $white;
 	width: 100%;
 	text-align: center;
+	border: 0;
 	border-radius: 1rem;
-	padding: 2.4rem 1.2rem;
-	font-size: 2rem;
+	padding: 1.2rem 1.2rem;
+	font-size: 1.6rem;
+	letter-spacing: 0.08rem;
 	transition: background 350ms ease-in-out;
 	&:hover{
 		background: darken($orange, 15%);
 	}
 }
 
+.thank-you {
+	text-align: center;
+	margin-bottom: 20rem;
+
+	h2{
+		font-size: 2.8rem;
+		margin: 0 0 2.5rem 0;
+	}
+
+}
+
+
+form {
+	padding: 0 2rem;
+
+	h2 {
+		font-size: 2.8rem;
+		text-align: center;
+		margin: 0 0 2.5rem 0;
+	}
+
+	h3 {
+		font-size: 2rem;
+		width: 100%;
+		margin: 0 0 2rem 0;		
+		@media (min-width: $medium) {
+			width: 50%;
+		}
+	}
+
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0 0 2rem 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.inline {
+		display: inline-block;
+	}
+
+	.radio {
+		display: block;
+		margin: 0 0 2rem 0;
+		@media (min-width: $medium) {
+			margin: 0 2rem 0 0;
+			display: inline-block;
+		}
+	}
+
+	label {
+		font-size: 1.4rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.input {
+		font-size: 1.6rem;
+		padding: 1.2rem 2.4rem;
+		border-radius: 1rem;
+		border: 1px solid rgba(0,0,0,0.3);
+		width: 100%;
+	}
+
+	.btn {
+		margin: 2rem 0 0 0;
+		@media (min-width: 768px) {
+			width: auto;
+			display: block;
+			padding: 1.2rem 2.4rem;
+		}
+	}
+
+}
+
+.location,
+.accommodation {
+
+	h2 {
+		font-size: 2.8rem;
+		text-align: center;
+		margin: 0 0 2rem 0;		
+	}
+
+}
+
+.accommodation {
+
+	address {
+		margin: 0 0 2rem 0;
+		font-size: 1.4rem;
+	}
+	
+	.btn {
+		@media (min-width: 768px) {
+			width: auto;
+			padding: 1.2rem 2.4rem;
+		}
+	}
+}
+
+.hotel-phone {
+	color: $orange;
+	text-decoration: none;
+}
+
 
 footer {
-	margin-top: 10rem;
+	margin-top: 8rem;
 	background: url('../images/footer.jpg') center center no-repeat;
 	background-size: cover;
 	display: flex;
-	padding: 10rem 0;
+	padding: 8rem 0;
 	text-align: center;
 	color: $white;
 	text-shadow: 0px 3px 6px rgba(0, 0, 0, .75);
@@ -261,3 +369,5 @@ footer {
 		font-size: 1.4rem;
 	}
 }
+
+

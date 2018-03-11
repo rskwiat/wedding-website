@@ -24,13 +24,19 @@ router.get('/story', (req, res) => {
 });
 
 router.post('/rsvp', async (req, res) => {
-  const { form } = req.body;
+  //Check for errors first
+  const { name, email, rsvp, dinner } = req.body;
   
   const message = {
     "from": "rsvp@koszerskwiattieit.com",
     "to": "koszerskwiattieit@gmail.com",
     "subject": "RSVP - October 27th 2018",
-    "text": form
+    "html": `<html>
+      <p><b>Name:</b> ${name}</p>
+      <p><b>Email Address:</b> ${email}</p>
+      <p><b>Attending:</b> ${rsvp}</p>
+      <p><b>Dinner Choice:</b> ${dinner}</p>
+    </html>`,
   }
 
   try {

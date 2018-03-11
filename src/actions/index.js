@@ -1,6 +1,7 @@
 import {
   FETCH_LOCATION,
   FETCH_STORY,
+  SUBMIT_FORM,
 } from './types';
 
 export const fetchLocation = () => async (dispatch) => {
@@ -22,7 +23,7 @@ export const fetchStory = () => async (dispatch) => {
   });
 }
 
-export const submitForm = (data) => {
+export const submitForm = (data) => (dispatch) => {
   fetch('/api/rsvp', { 
     method: 'POST',
     headers: {
@@ -30,6 +31,10 @@ export const submitForm = (data) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
+  }).then((response) => { 
+    dispatch({
+      type: SUBMIT_FORM
+    });
   });
 }
 

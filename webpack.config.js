@@ -71,7 +71,7 @@ const config = {
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 15
     }),
-    new webpack.optimize.UglifyJsPlugin(),
+    // new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
