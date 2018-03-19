@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
 	font-size: 1.6rem;
 	line-height: 1.9;
+	color: $body-copy;
 }
 
 .img-responsive {
@@ -73,6 +74,7 @@ p {
 	}
 
 	p {
+		color: $white;
 		font-size: 2rem;
 		margin: 0;
 		line-height: 1;
@@ -274,6 +276,11 @@ form {
 
 	.inline {
 		display: inline-block;
+		
+		label {
+			margin: 0 0 1rem 0.5rem;
+		}
+
 	}
 
 	.radio {
@@ -309,6 +316,7 @@ form {
 
 }
 
+.photos,
 .location,
 .accommodation {
 
@@ -370,4 +378,13 @@ footer {
 	}
 }
 
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}
 
+.fadeIn {
+	opacity: 0;
+	animation: fadeIn 450ms ease-in-out 1500ms 1 forwards;
+}

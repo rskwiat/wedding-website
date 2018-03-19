@@ -5,6 +5,11 @@ import Proptypes from 'prop-types';
 import * as actions from '../actions';
 
 class SaveTheDate extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     const { fetchLocation } = this.props;
     fetchLocation();
@@ -12,10 +17,11 @@ class SaveTheDate extends Component {
 
   render() {
     const { date, venue, city } = this.props.location;
+
     return (
       <div className="save-the-date">
         <div className="overlay">
-          <div className="container">
+          <div className='container fadeIn'>
             <p>{date}</p>
             <h2>Save <span>the</span> Date</h2>
             <h3>Melissa &amp; Robert</h3>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import PageHeader from '../components/page-header';
 
 const ThankYou = ({ pageId }) => (
@@ -14,5 +15,9 @@ const ThankYou = ({ pageId }) => (
 
   </div>
 );
+
+ThankYou.propTypes = {
+  pageId: Proptypes.string
+};
 
 export default ThankYou;
