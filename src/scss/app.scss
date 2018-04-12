@@ -8,6 +8,12 @@ html {
 	font-size: 62.5%;
 }
 
+.leaflet-container {
+	overflow: hidden;
+	height: 400px;
+	width: 400px;
+}
+
 body {
 	margin: 0;
 	font-family: $base-font;

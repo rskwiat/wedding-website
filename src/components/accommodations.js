@@ -1,17 +1,12 @@
 import React from 'react';
 
 import Button from './button';
+import MapComponent from './map';
 
 const Accommodations = ({ venue, roomBlock }) => (
   <div className="container container-small">
     <div className="row">
-      <div className="location">
-        <h2>{venue}</h2>
-
-        <p>Map of Venue</p>
-
-      </div>
-
+      <MapComponent />
       <div className="accommodation">
         <h2>{roomBlock}</h2>
         <p>A block of rooms have been reserved at a discounted rate. Please call and mention the Kozser Skwiat Wedding Room Block. October 26 to October 28th</p>
