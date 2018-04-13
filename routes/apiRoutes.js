@@ -1,8 +1,7 @@
-
 const settings = require('../config/settings');
 const mailgun = require('mailgun-js')({
-    apiKey: settings.mailgun, 
-    domain: settings.domain
+  apiKey: settings.mailgun, 
+  domain: settings.domain
 });
 
 const express = require('express');

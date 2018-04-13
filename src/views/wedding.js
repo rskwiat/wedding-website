@@ -7,7 +7,10 @@ import Accommodations from '../components/accommodations';
 const Wedding = ({ pageId }) => (
   <div className={`${pageId}-page page`}>
     <PageHeader />
-    <Accommodations venue="Butter Milk Falls Inn" roomBlock="Accommodations - Holiday Inn Express" />
+    <Accommodations 
+      venue="Butter Milk Falls Inn" 
+      roomBlock="Accommodations - Holiday Inn Express"
+    />
   </div>
 );
 
