@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import WebFont from 'webfontloader';
 
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -15,6 +16,14 @@ import Registry from './views/registry';
 import Rsvp from './views/rsvp';
 import ThankYou from './views/thankyou';
 
+import './scss/app.scss';
+
+WebFont.load({
+  google: {
+    families: ['Sanchez']
+  }
+});
+
 const App = () => (
   <Router>
     <div>
@@ -24,8 +33,8 @@ const App = () => (
           <Route path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
           <Route path="/photos" render={(props) => <Photos {...props} pageId="photos" />} />
           <Route path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
-          <Route path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />
           <Route path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
+          <Route path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />
         </Switch>
       <Footer
         copyright="2018"

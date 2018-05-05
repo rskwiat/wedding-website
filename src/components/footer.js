@@ -5,7 +5,7 @@ const Footer = ({ copyright, builtBy, email }) => (
   <footer>
     <div className="container">
       <h2>Thank You!</h2>
-      <h3>Melissa &amp; Robert</h3>
+      <h4>Melissa &amp; Robert</h4>
       <p>Copyright {copyright} | Designed By: <a href={`mailto:${email}`}>{builtBy}</a></p>
     </div>
   </footer>

@@ -12,23 +12,16 @@ const VENDOR_LIBS = [
   'react-dom',
 ];
 
-const ENTRY = {
-  app: path.resolve('./src/index.js'),
-};
-
-const PATHS = {
-  build: path.join(__dirname, './public'),
-}
-
 const config = {
+  mode: process.env.NODE_ENV,
 	entry: {
-    bundle: ENTRY.app,
+    bundle: path.resolve('./src/index.js'),
     vendor: VENDOR_LIBS
   },
 	output: {
-		path: PATHS.build,
+		path: path.join(__dirname, './public'),
 		publicPath: '/',
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js' 
 	},
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
@@ -42,6 +35,7 @@ const config = {
       },
       {
         test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/scss'),
         use: ExtractTextPlugin.extract([
           { loader: 'css-loader' },
           { loader: 'postcss-loader' },
@@ -60,18 +54,26 @@ const config = {
       }
 		]
 	},
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
-    new ExtractTextPlugin('style.[chunkhash].css'),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+    new ExtractTextPlugin({
+      filename: 'styles.[name].[chunkhash].css',
+      allChunks: true,
     }),
+  
     new ProgressBarPlugin({
       format: `build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`
     }),
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 15
-    }),
-    // new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
