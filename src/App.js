@@ -11,7 +11,6 @@ import Footer from './components/footer';
 
 import Home from './views/home';
 import Wedding from './views/wedding';
-import Photos from './views/photos';
 import Registry from './views/registry';
 import Rsvp from './views/rsvp';
 import ThankYou from './views/thankyou';
@@ -31,7 +30,6 @@ const App = () => (
         <Switch>
           <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
           <Route path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
-          <Route path="/photos" render={(props) => <Photos {...props} pageId="photos" />} />
           <Route path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
           <Route path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
           <Route path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />

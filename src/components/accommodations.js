@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from './button';
-import MyMapComponent from './map';
+import ButtermilkMap from './map';
 
 import settings from '../config/settings';
 
@@ -12,7 +12,8 @@ const Accommodations = ({ venue, roomBlock }) => {
   return (
     <div className="container container-small">
       <div className="row">
-        <MyMapComponent
+
+        <ButtermilkMap
           directions="https://www.google.com/maps/dir//Buttermilk+Falls+Inn+%26+Spa,+220+N+Rd,+Milton,+NY+12547/@40.8609943,-73.9301509,15z/data=!4m18!1m8!3m7!1s0x89dd3c13fa9cdf3b:0x56494373ce697a1!2sButtermilk+Falls+Inn+%26+Spa!5m1!1s2018-04-22!8m2!3d41.6669666!4d-73.9549376!4m8!1m0!1m5!1m1!1s0x89dd3c13fa9cdf3b:0x56494373ce697a1!2m2!1d-73.9549376!2d41.6669666!3e3"
           lat="41.6669706"
           long="-73.9571263"
@@ -23,8 +24,8 @@ const Accommodations = ({ venue, roomBlock }) => {
           mapElement={<div style={{ height: `100%` }} />}
         />
 
-        <div className="accommodation">
-          <h2>{roomBlock}</h2>
+        <div className="accommodations">
+          <h3>{roomBlock}</h3>
           <p>A block of rooms have been reserved at a discounted rate. Please call and mention the Kozser Skwiat Wedding Room Block. October 26 to October 28th</p>
 
           <address>

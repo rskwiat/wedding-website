@@ -19,6 +19,8 @@ module.exports = {
   },
   "moduleNameMapper": {
     "\\.(scss)$": "identity-obj-proxy",
+    "\\.(jpg)$": "identity-obj-proxy",
+    "\\.(png)$": "identity-obj-proxy",
     "\\.(svg)$": "<rootDir>/src/__mocks__/mock-asset.js",
   },
   "snapshotSerializers": ["enzyme-to-json/serializer"],

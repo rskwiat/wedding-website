@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application should mount 1`] = `
+<BrowserRouter>
+  <div>
+    <Navigation />
+    <Switch>
+      <Route
+        exact={true}
+        path="/"
+        render={[Function]}
+      />
+      <Route
+        path="/wedding"
+        render={[Function]}
+      />
+      <Route
+        path="/registry"
+        render={[Function]}
+      />
+      <Route
+        path="/rsvp"
+        render={[Function]}
+      />
+      <Route
+        path="/rsvp/thank-you"
+        render={[Function]}
+      />
+    </Switch>
+    <Footer
+      builtBy="The Groom"
+      copyright="2018"
+      email="rskwiat@gmail.com"
+    />
+  </div>
+</BrowserRouter>
+`;

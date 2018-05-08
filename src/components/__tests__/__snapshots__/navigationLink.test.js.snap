@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application should mount 1`] = `
+<li>
+  <Link
+    replace={false}
+    to="/"
+  >
+    test item
+  </Link>
+</li>
+`;

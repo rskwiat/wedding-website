@@ -1,6 +1,5 @@
 module.exports = {
   'extends': [
-   'rallycoding',
    'eslint:recommended',
    'plugin:react/recommended'
   ],

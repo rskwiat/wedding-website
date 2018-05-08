@@ -17,7 +17,6 @@ class Registry extends Component {
     if (!location) {
       this.props.fetchLocation();
     }
-
   }
 
   render() {
@@ -33,7 +32,7 @@ class Registry extends Component {
         />
 
         <div className="container">
-          <div className="flex-row">
+          <div className="row">
             <RegistryCard 
               img={soKind} 
               title="So Kind"

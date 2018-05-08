@@ -6,8 +6,7 @@
   "scripts": {
     "dev:start": "NODE_ENV=development nodemon ./bin/www",
     "build": "NODE_ENV=production webpack -p",
-    "test": "NODE_ENV=test jest --coverage",
-    "lint": "eslint src/**/*.js*"
+    "test": "NODE_ENV=test jest"
   },
   "repository": {
     "type": "git",

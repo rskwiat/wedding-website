@@ -8,7 +8,7 @@ import {
   InfoWindow 
 } from 'react-google-maps';
 
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+const ButtermilkMap = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={13}
     defaultCenter={{ lat: 41.6669706, lng: -73.9571263 }}
@@ -17,7 +17,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
       <Marker position={{ lat: 41.6669706, lng: -73.9571263 }}>
       <InfoWindow onCloseClick={props.onToggleOpen}>
         <div>
-          Buttermilk Falls Inn:
+          Buttermilk Falls Inn: 
           <a
             target="_blank" 
             rel="noopener noreferrer" 
@@ -32,8 +32,8 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   </GoogleMap>
 ));
 
-MyMapComponent.propTypes = {
+ButtermilkMap.propTypes = {
   props: Proptypes.object
 };
 
-export default MyMapComponent;
+export default ButtermilkMap;

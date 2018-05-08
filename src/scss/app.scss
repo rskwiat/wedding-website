@@ -20,9 +20,23 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0 0 2rem 0;
 }
 
+h2 {
+	font-size: 3.2rem
+}
+
+h3 {
+	font-size: 2.8rem;
+	text-align: center;
+}
+
+h4 {
+	font-size: 2.4rem;
+}
+
 p {
 	font-size: 1.6rem;
 	line-height: 1.9;
+	margin: 0 0 2rem 0;
 	color: $body-copy;
 }
 
@@ -43,10 +57,6 @@ p {
 }
 
 .row {
-	padding: 0 2rem;
-}
-
-.flex-row {
 	padding: 0 2rem;
 	display: flex;
 	flex-direction: column;
@@ -132,13 +142,6 @@ header {
 
 /* Navigation Styling */
 
-nav .hidden {
-	display: none;
-  @include mediumScreen {
-    display: inline;
-  }	
-}
-
 nav {
 	background: $white;
 	display: flex;
@@ -189,12 +192,14 @@ a {
 }
 
 .our-story {
-	h2 {
-		font-size: 2.8rem;
-		text-align: center;
-		margin: 0 0 2.5rem 0;
-		padding: 0 0 2.5rem 0;
+	h3 {
+		margin: 0 0 2rem 0;
+		padding: 0 0 2rem 0;
 		border-bottom: 1px solid rgba(0,0,0,0.3);
+	}
+
+	.row {
+		flex-direction: column;
 	}
 }
 
@@ -246,7 +251,6 @@ a {
 	}
 
 }
-
 
 form {
 	padding: 0 2rem;
@@ -316,18 +320,6 @@ form {
 
 }
 
-.photos,
-.location,
-.accommodation {
-
-	h2 {
-		font-size: 2.8rem;
-		text-align: center;
-		margin: 0 0 2rem 0;		
-	}
-
-}
-
 .accommodation {
 
 	address {
@@ -365,18 +357,10 @@ footer {
 		}
 	}
 
-	h2 {
-		font-size: 3rem
-	}
-
 	p {
 		color: $white;
 		font-size: 1.4rem;
 	}
-}
-
-h4 {
-	font-size: 2.4rem;
 }
 
 @keyframes fadeIn {

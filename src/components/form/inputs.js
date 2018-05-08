@@ -5,7 +5,6 @@ const Inputs = ({ name, placeholder, type, onChange, errors }) => (
   <fieldset>
     <label>{name}</label>
       <input
-        required
         name={name.toLowerCase()}
         className="input" 
         type={type} 
@@ -24,8 +23,4 @@ Inputs.propTypes = {
   errors: Proptypes.object
 };
 
-
 export default Inputs;
-
-
-

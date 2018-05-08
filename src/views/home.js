@@ -12,11 +12,10 @@ class Home extends Component {
 
   renderOurStory() {
     const { title, intro } = this.props.story;
-
     return (
       <div className="container container-small our-story">
         <div className="row">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <p>{intro}</p>
         </div>
       </div>
