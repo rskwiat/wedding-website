@@ -24,6 +24,7 @@ export const fetchStory = () => async (dispatch) => {
 }
 
 export const submitForm = (data) => (dispatch) => {
+  console.log('SUBMIT DATA', data);
   fetch('/api/rsvp', { 
     method: 'POST',
     headers: {

@@ -28,7 +28,7 @@ router.get('/story', (req, res) => {
 router.post('/rsvp', async (req, res) => {
   //Check for errors first
   const { name, email, rsvp, dinner } = req.body;
-  
+
   const message = {
     "from": "rsvp@koszerskwiattieit.com",
     "to": "koszerskwiattieit@gmail.com",
@@ -41,13 +41,15 @@ router.post('/rsvp', async (req, res) => {
     </html>`,
   }
 
-  try {
-    await mailgun.messages().send(message);
-    await res.redirect('/');
-  } catch (err) {
-    res.status(422).send(err);
-    await res.redirect('/error');
-  }
+  console.log(message);
+
+  // try {
+  //   await mailgun.messages().send(message);
+  //   await res.redirect('/');
+  // } catch (err) {
+  //   res.status(422).send(err);
+  //   await res.redirect('/error');
+  // }
 });
 
 module.exports = router;

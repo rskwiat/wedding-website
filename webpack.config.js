@@ -10,13 +10,18 @@ const chalk = require('chalk');
 const VENDOR_LIBS = [
   'react',
   'react-dom',
+  'react-redux',
+  'react-router-dom',
+  'redux-form',
+  'redux-thunk',
+  'redux-form',
+  'webfontloader',
 ];
 
 const config = {
   mode: process.env.NODE_ENV,
 	entry: {
     bundle: path.resolve('./src/index.js'),
-    vendor: VENDOR_LIBS
   },
 	output: {
 		path: path.join(__dirname, './public'),
