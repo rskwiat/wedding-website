@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   BrowserRouter as Router,
-  Switch,
   Route
 } from 'react-router-dom';
 import WebFont from 'webfontloader';
@@ -27,13 +26,11 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
-        <Switch>
-          <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
-          <Route path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
-          <Route path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
-          <Route path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
-          <Route path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />
-        </Switch>
+      <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
+      <Route exact path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
+      <Route exact path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
+      <Route exact path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
+      <Route exact path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />
       <Footer
         copyright="2018"
         email="rskwiat@gmail.com"

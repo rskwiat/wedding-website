@@ -4,16 +4,28 @@ import { connect } from 'react-redux';
 
 import PageHeader from '../components/page-header';
 import Form from '../components/form';
+import ContactForm from '../components/contactForm';
 
 import * as actions from '../actions';
 
 class Rsvp extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.submit = this.submit.bind(this);
+  }
 
   componentDidMount() {
     const { location } = this.props;
     if (!location) {
       this.props.fetchLocation();
     }
+  }
+
+  submit(values) {
+    this.props.submitForm(values);
+    this.props.history.push('/rsvp/thank-you');
   }
 
   render() {
@@ -26,7 +38,8 @@ class Rsvp extends Component {
           venue={venue} 
           city={city} 
         />
-        <Form title="RSVP" />
+
+        <ContactForm title="RSVP" onSubmit={this.submit} />
       </div>
     );
 
@@ -35,7 +48,7 @@ class Rsvp extends Component {
 
 function mapStateToProps(state) {
   return {
-    location: state.location
+    location: state.location,
   };
 }
 
