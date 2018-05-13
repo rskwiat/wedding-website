@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Proptypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import renderField from './form/renderFields';
@@ -15,9 +15,9 @@ const fieldType = [
 
 const ContactForm = ({ title, handleSubmit }) => {
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className="container container-small">
       <form onSubmit={handleSubmit}>
+        <h2>{title}</h2>
         { fieldType.map(function(item, index){
             return (
               <Field 
@@ -30,7 +30,7 @@ const ContactForm = ({ title, handleSubmit }) => {
               />
             );
         })}
-        <button type="submit">Submit</button>      
+        <button className="btn" type="submit">Submit</button>      
       </form>
     </div>
   );
@@ -42,7 +42,7 @@ function validate(values) {
 
   if (!values.name) {
     errors.name = 'Required'
-  } else if (values.name.length < 5) {
+  } else if (values.name.length < 3) {
     errors.name = 'Must be a full first and last name'
   }
 

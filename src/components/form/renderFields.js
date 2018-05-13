@@ -4,30 +4,30 @@ import Proptypes from 'prop-types';
 const renderFields = ({ type, input, checked, label, meta: { error, touched } }) => {
   if (type === 'radio') {
     return (
-      <div>
+      <fieldset className={type}>
         <label>{label}</label>
         <input type={type} {...input} />
-      </div>
+      </fieldset>
     );
   }
 
   if (type === 'checkbox') {
     return (
-      <div>
+      <fieldset className={`inline ${type}`}>
         <label>{label}</label>
         <input type={type} {...input} checked={checked} />       
-      </div>
+      </fieldset>
     )
   }
 
   return (
-    <div>
+    <fieldset>
       <label>{label}</label>
-      <input type={type} {...input} style={{ marginBottom: '5px' }} />
-      <div className="error red-text">
+      <input className="input" type={type} {...input} />
+      <div className="error error-text">
         {touched && error}
       </div>
-    </div>
+    </fieldset>
   );
 }
 

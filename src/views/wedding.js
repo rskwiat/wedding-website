@@ -44,7 +44,8 @@ function mapStateToProps(state) {
 
 Wedding.propTypes = {
   fetchLocation: Proptypes.func.isRequired,
-  pageId: Proptypes.string
+  pageId: Proptypes.string,
+  location: Proptypes.object
 };
 
 export default connect(mapStateToProps, actions)(Wedding);
