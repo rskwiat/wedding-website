@@ -41,15 +41,12 @@ router.post('/rsvp', async (req, res) => {
     </html>`,
   }
 
-  console.log(message);
-
-  // try {
-  //   await mailgun.messages().send(message);
-  //   await res.redirect('/');
-  // } catch (err) {
-  //   res.status(422).send(err);
-  //   await res.redirect('/error');
-  // }
+  try {
+    await mailgun.messages().send(message);
+  } catch (err) {
+    res.status(422).send(err);
+    await res.redirect('/error');
+  }
 });
 
 module.exports = router;

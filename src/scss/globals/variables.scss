@@ -9,13 +9,19 @@ $body-copy: #646464;
 $gray: #666;
 
 @mixin mediumScreen {
-  @media (min-width: #{$medium}) {
+  @media (min-width: $medium) {
     @content;
   }
 }
 
+@mixin small() {
+    @media only screen and (min-width: 320px) {
+        @content;
+    }
+}
+
 @mixin largeScreen {
-  @media (min-width: #{$large}) {
+  @media (min-width: $large) {
     @content;
   }
 }

@@ -3,7 +3,6 @@ import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import PageHeader from '../components/page-header';
-import Form from '../components/form';
 import ContactForm from '../components/contactForm';
 
 import * as actions from '../actions';
@@ -51,5 +50,13 @@ function mapStateToProps(state) {
     location: state.location,
   };
 }
+
+Rsvp.propTypes = {
+  history: Proptypes.object,
+  location: Proptypes.object,
+  fetchLocation: Proptypes.func.isRequired,
+  submitForm: Proptypes.func.isRequired,
+  pageId: Proptypes.string
+};
 
 export default connect(mapStateToProps, actions)(Rsvp);
