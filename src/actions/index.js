@@ -1,6 +1,7 @@
 import {
   FETCH_LOCATION,
   FETCH_STORY,
+  FETCH_ACCOMMODATIONS,
   SUBMIT_FORM,
 } from './types';
 
@@ -14,6 +15,16 @@ export const fetchLocation = () => async (dispatch) => {
   });
 };
 
+export const fetchAccommodations = () => async (dispatch) => {
+  const res = await fetch('/api/accommodations', { method: 'GET' });
+  const data = await res.json();
+
+  dispatch({
+    type: FETCH_ACCOMMODATIONS,
+    payload: data
+  });
+};
+
 export const fetchStory = () => async (dispatch) => {
   const res = await fetch('/api/story', { method: 'GET' });
   const data = await res.json();
@@ -21,7 +32,7 @@ export const fetchStory = () => async (dispatch) => {
     type: FETCH_STORY, 
     payload: data
   });
-}
+};
 
 export const submitForm = (data) => (dispatch) => {
   fetch('/api/rsvp', { 
@@ -36,5 +47,5 @@ export const submitForm = (data) => (dispatch) => {
       type: SUBMIT_FORM
     });
   });
-}
+};
 

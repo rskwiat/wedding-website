@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Proptypes from 'prop-types';
 import { 
   withScriptjs, 
@@ -16,14 +16,13 @@ const ButtermilkMap = withScriptjs(withGoogleMap((props) =>
     {props.isMarkerShown && 
       <Marker position={{ lat: 41.6669706, lng: -73.9571263 }}>
       <InfoWindow onCloseClick={props.onToggleOpen}>
-        <div>
-          Buttermilk Falls Inn: 
+        <div> 
           <a
             target="_blank" 
             rel="noopener noreferrer" 
             href={props.directions}
           >
-            Directions
+          Directions to Buttermilk Falls Inn
           </a>
         </div>
       </InfoWindow>
