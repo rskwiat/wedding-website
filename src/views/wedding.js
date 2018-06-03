@@ -31,27 +31,41 @@ class Wedding extends Component {
         isMarkerShown
         googleMapURL={URL}
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `40rem`, marginBottom: '4rem' }} />}
+        containerElement={<div style={{ height: `40rem`, margin: '0 auto 4rem', maxWidth: '90%' }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
     );
   }
 
-  render() {
+  renderAccommodations() {
     const { holidayInn, buttermilkFalls } = this.props.accommodations;
+    if (!holidayInn || !buttermilkFalls) {
+      return <div />
+    }
+
+    return (
+      <div>
+        <Accommodations venue={buttermilkFalls} />
+        <Accommodations venue={holidayInn} />
+      </div>
+    );
+  }
+
+  render() {
     const { date, venue, city } = this.props.location;
 
     return (
-      <div className={`${this.props.pageId}-page page`}>
+      <div className="wedding-page page">
         <PageHeader 
           date={date} 
           venue={venue} 
           city={city} 
         />
-        {this.renderMap()}
 
-        <Accommodations venue={holidayInn} />
-        <Accommodations venue={buttermilkFalls} />
+        <h2>Directions &amp; Accommodations</h2>
+        {this.renderMap()}
+        {this.renderAccommodations()}
+
       </div>
     );
   }

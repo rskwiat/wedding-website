@@ -22,23 +22,22 @@ router.get('/accommodations', (req, res) => {
   res.json({
     'holidayInn': { 
       'title': 'Holiday Inn Express',
-      'description': 'A block of rooms have been reserved at a discounted rate. Please call and mention the Kozser Skwiat Wedding Room Block. October 26 to October 28th',
-      'address': '2750 South Rd, Poughkeepsie, NY 12601',
-      'location' : 'Poughkeepsie, NY',
-      'directions' : '(7.5 miles from Buttermilk)',
+      'description': 'A block of rooms have been reserved at a discounted rate. Please call and mention the Kozser-Skwiat Wedding Room Block. October 26 to October 28th',
+      'address': '2750 South Rd',
+      'location' : 'Poughkeepsie, New York 12601 (7.5 miles from Buttermilk)',
       'number': '845-473-1151',
       'url': 'http://www.hiexpress.com/poughkeepsie',
     },
     'buttermilkFalls': {
       'title': 'Buttermilk Falls Inn',
-      'description': 'Rooms are also available at butttermilks falls inn',
-      'spreadsheet': 'Please take a look test...',
-      'url': 'http://sheets.google.com/???'
+      'description': 'If you want to stay at Buttermilk Falls Inn, there are several rooms and houses on the 75 acre estate available for your use during the weekend. Please take a look and book your room or house at the Inn.',
+      'address': '220 North Road',
+      'location': 'Milton, New York 12547',
+      'number': '845-795-310',
+      'url': 'https://www.buttermilkfallsinn.com/'
     }
-    
-  })
-
-})
+  });
+});
 
 router.get('/story', (req, res) => {
   res.json({

@@ -22,15 +22,22 @@ WebFont.load({
   }
 });
 
+
+const Routes = [
+  { path: '/', component: Home },
+  { path: '/wedding', component: Wedding },
+  { path: '/registry', component: Registry },
+  { path: '/rsvp', component: Rsvp },
+  { path: '/rsvp/thank-you', component: ThankYou },
+];
+
 const App = () => (
   <Router>
     <div>
       <Navigation />
-      <Route exact path="/" render={(props) => <Home {...props} pageId="home" />} />
-      <Route exact path="/wedding" render={(props) => <Wedding {...props} pageId="wedding" />} />
-      <Route exact path="/registry" render={(props) => <Registry {...props} pageId="registry" />} />
-      <Route exact path="/rsvp" render={(props) => <Rsvp {...props} pageId="rsvp" />} />
-      <Route exact path="/rsvp/thank-you" render={(props) => <ThankYou {...props} pageId="thanks" />} />
+      { Routes.map((route, i) => (
+        <Route key={i} exact path={route.path} component={route.component} />
+      )) }
       <Footer
         copyright="2018"
         email="rskwiat@gmail.com"

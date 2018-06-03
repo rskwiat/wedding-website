@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <div className="container container-small our-story">
         <div className="row">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <p>{intro}</p>
         </div>
       </div>
@@ -41,7 +41,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className={`${this.props.pageId}-page page`}>
+      <div className='page'>
         {this.renderSaveTheDate()}
         {this.renderOurStory()}
       </div>

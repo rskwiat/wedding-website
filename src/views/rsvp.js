@@ -31,7 +31,7 @@ class Rsvp extends Component {
     const { date, venue, city } = this.props.location;
 
     return (
-      <div className={`${this.props.pageId}-page page`}>
+      <div className='page'>
         <PageHeader 
           date={date} 
           venue={venue} 

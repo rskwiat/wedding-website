@@ -66,6 +66,10 @@ p {
 	}
 }
 
+.no-flex {
+	display: block;
+}
+
 .thank-you {
 	text-align: center;
 	flex-direction: column;
@@ -127,6 +131,32 @@ p {
 	width: 100%;
   background: rgba(0,0,0, .5);
   background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.2));
+}
+
+.wedding-page {
+
+	header {
+		margin: 5.5rem 0 0 0;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 4rem 0;
+		a {
+			color: $gray-text;
+		}
+	}
+
+	p a {
+		color: $gray-text;
+	}
+
+	.btn {
+		width: 100%;
+		@media (min-width: 768px) {
+			width: 45%;
+		}
+	}
 }
 
 
@@ -209,7 +239,8 @@ a {
 }
 
 .our-story {
-	h3 {
+	h2 {
+		text-align: center;
 		margin: 0 0 2rem 0;
 		padding: 0 0 2rem 0;
 		border-bottom: 1px solid rgba(0,0,0,0.3);

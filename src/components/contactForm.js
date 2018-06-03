@@ -3,7 +3,6 @@ import Proptypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import renderField from './form/renderFields';
 
-
 const fieldType = [
   { type: 'text', name: 'name', label: 'Name' },
   { type: 'email', name: 'email', label: 'Email' },
