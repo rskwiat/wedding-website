@@ -13,15 +13,17 @@ import * as actions from '../actions';
 class Registry extends Component {
 
   componentDidMount() {
-    const { location } = this.props;
-    if (!location) {
-      this.props.fetchLocation();
-    }
+    this.props.fetchAccommodations();
+    this.props.fetchLocation();
   }
 
   render() {
 
     const { date, venue, city } = this.props.location;
+
+    if (!date) {
+      return <div>Loading</div>
+    }
 
     return (
       <div className='page'>

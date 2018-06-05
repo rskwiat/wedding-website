@@ -59,6 +59,10 @@ const config = {
 		]
 	},
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "vendor",
+      minChunks: Infinity,
+    }),
     new ExtractTextPlugin({
       filename: 'styles.[name].[chunkhash].css',
       allChunks: true,

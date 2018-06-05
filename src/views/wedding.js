@@ -12,11 +12,8 @@ import * as actions from '../actions';
 class Wedding extends Component {
 
   componentDidMount() {
-    const { location } = this.props;
     this.props.fetchAccommodations();
-    if (!location) {
-      this.props.fetchLocation();
-    }
+    this.props.fetchLocation();
   }
 
   renderMap() {
@@ -53,7 +50,6 @@ class Wedding extends Component {
 
   render() {
     const { date, venue, city } = this.props.location;
-
     return (
       <div className="wedding-page page">
         <PageHeader 
@@ -61,13 +57,11 @@ class Wedding extends Component {
           venue={venue} 
           city={city} 
         />
-
-        <h2>Directions &amp; Accommodations</h2>
+        <h2 style={{ margin: '4rem 0' }}>Directions &amp; Accommodations</h2>
         {this.renderMap()}
         {this.renderAccommodations()}
-
       </div>
-    );
+    )
   }
 }
 
