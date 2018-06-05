@@ -6,6 +6,7 @@
   "scripts": {
     "dev:start": "NODE_ENV=development nodemon ./bin/www",
     "build": "NODE_ENV=production webpack -p",
+    "start": "NODE_ENV=production node ./bin/www",
     "test": "NODE_ENV=test jest"
   },
   "repository": {
@@ -40,7 +41,8 @@
     "redux-thunk": "^2.2.0",
     "serve-favicon": "^2.4.5",
     "supertest": "^3.0.0",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
@@ -59,10 +61,10 @@
     "eslint": "^4.17.0",
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-plugin-react": "^7.6.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "identity-obj-proxy": "^3.0.0",
-    "image-webpack-loader": "^4.1.0",
+    "image-webpack-loader": "^3.6.0",
     "jest": "^22.2.2",
     "node-sass": "^4.7.2",
     "nodemon": "^1.14.12",
@@ -71,7 +73,6 @@
     "progress-bar-webpack-plugin": "^1.11.0",
     "sass-loader": "^6.0.6",
     "url-loader": "^0.6.2",
-    "webpack": "^4.7.0",
     "webpack-cli": "^2.1.2",
     "webpack-dev-middleware": "^3.1.3"
   }

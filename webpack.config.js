@@ -19,7 +19,6 @@ const VENDOR_LIBS = [
 ];
 
 const config = {
-  mode: process.env.NODE_ENV,
 	entry: {
     bundle: path.resolve('./src/index.js'),
   },
@@ -59,23 +58,11 @@ const config = {
       }
 		]
 	},
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all'
-        }
-      }
-    }
-  },
   plugins: [
     new ExtractTextPlugin({
       filename: 'styles.[name].[chunkhash].css',
       allChunks: true,
     }),
-  
     new ProgressBarPlugin({
       format: `build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`
     }),
