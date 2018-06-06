@@ -49,6 +49,7 @@ function mapStateToProps(state) {
 }
 
 ThankYou.propTypes = {
+  fetchAccommodations: Proptypes.func.isRequired,
   fetchLocation: Proptypes.func.isRequired,
   location: Proptypes.object,
   pageId: Proptypes.string

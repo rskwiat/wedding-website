@@ -26,6 +26,14 @@ const Navigation = () => (
        { NAV.map(function(item, index){
           return <NavLink key={index} title={item.title} url={item.url} />
         })}
+       <li>
+        <a 
+          href="https://www.instagram.com/explore/tags/koszerskwiattieit/" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          #KoszerSkwiatTieIt
+        </a>
+       </li>
     </ul>
   </nav>
 );

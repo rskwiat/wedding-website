@@ -62,6 +62,7 @@ function mapStateToProps(state) {
 
 
 Registry.propTypes = {
+  fetchAccommodations: Proptypes.func.isRequired,
   fetchLocation: Proptypes.func.isRequired,
   location: Proptypes.object,
   date: Proptypes.string,

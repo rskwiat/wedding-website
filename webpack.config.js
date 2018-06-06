@@ -12,7 +12,6 @@ const VENDOR_LIBS = [
   'react-dom',
   'react-redux',
   'react-router-dom',
-  'redux-form',
   'redux-thunk',
   'redux-form',
   'webfontloader',
@@ -21,6 +20,7 @@ const VENDOR_LIBS = [
 const config = {
 	entry: {
     bundle: path.resolve('./src/index.js'),
+    vendor: VENDOR_LIBS,
   },
 	output: {
 		path: path.join(__dirname, './public'),
@@ -60,8 +60,7 @@ const config = {
 	},
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-      minChunks: Infinity,
+      names: ['vendor', 'manifest']
     }),
     new ExtractTextPlugin({
       filename: 'styles.[name].[chunkhash].css',

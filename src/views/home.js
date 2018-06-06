@@ -11,12 +11,13 @@ class Home extends Component {
   }
 
   renderOurStory() {
-    const { title, intro } = this.props.story;
+    const { title, intro, wedding } = this.props.story;
     return (
       <div className="container container-small our-story">
         <div className="row">
           <h2>{title}</h2>
           <p>{intro}</p>
+          <p>{wedding}</p>
         </div>
       </div>
     );
@@ -58,6 +59,7 @@ function mapStateToProps(state) {
 }
 
 Home.propTypes = {
+  wedding: Proptypes.string,
   title: Proptypes.string,
   story: Proptypes.object,
   intro: Proptypes.string,
