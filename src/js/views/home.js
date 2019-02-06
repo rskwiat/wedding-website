@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import { fetchLocation, fetchStory } from '../actions';
 
 class Home extends Component {
 
   componentDidMount() {
-    this.props.fetchStory();
     this.props.fetchLocation();
+    this.props.fetchStory();   
   }
 
   renderOurStory() {
@@ -51,7 +51,7 @@ class Home extends Component {
 
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     story: state.story,
     location: state.location,    
@@ -72,4 +72,6 @@ Home.propTypes = {
   pageId: Proptypes.string
 };
 
-export default connect(mapStateToProps, actions)(Home);
+export default connect(mapStateToProps, 
+  { fetchLocation, fetchStory }
+)(Home);

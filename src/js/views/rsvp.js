@@ -5,21 +5,17 @@ import { connect } from 'react-redux';
 import PageHeader from '../components/page-header';
 import ContactForm from '../components/contactForm';
 
-import * as actions from '../actions';
+import { fetchLocation } from '../actions';
 
 class Rsvp extends Component {
 
   constructor(props) {
     super(props);
-
     this.submit = this.submit.bind(this);
   }
 
   componentDidMount() {
-    const { location } = this.props;
-    if (!location) {
-      this.props.fetchLocation();
-    }
+    this.props.fetchLocation();
   }
 
   submit(values) {
@@ -37,7 +33,6 @@ class Rsvp extends Component {
           venue={venue} 
           city={city} 
         />
-
         <ContactForm title="RSVP" onSubmit={this.submit} />
       </div>
     );
@@ -45,7 +40,7 @@ class Rsvp extends Component {
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     location: state.location,
   };
@@ -55,8 +50,10 @@ Rsvp.propTypes = {
   history: Proptypes.object,
   location: Proptypes.object,
   fetchLocation: Proptypes.func.isRequired,
-  submitForm: Proptypes.func.isRequired,
+  submitForm: Proptypes.func,
   pageId: Proptypes.string
 };
 
-export default connect(mapStateToProps, actions)(Rsvp);
+export default connect(mapStateToProps, 
+  { fetchLocation }
+)(Rsvp);

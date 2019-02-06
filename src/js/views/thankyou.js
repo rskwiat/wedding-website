@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Proptypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import PageHeader from '../components/page-header';
 
-import * as actions from '../actions';
+import { fetchLocation } from '../actions';
 
 class ThankYou extends Component {
   
   componentDidMount() {
-    this.props.fetchAccommodations();
     this.props.fetchLocation();
   }
 
@@ -49,11 +48,12 @@ function mapStateToProps(state) {
 }
 
 ThankYou.propTypes = {
-  fetchAccommodations: Proptypes.func.isRequired,
   fetchLocation: Proptypes.func.isRequired,
   location: Proptypes.object,
   pageId: Proptypes.string
 };
 
 
-export default connect(mapStateToProps, actions)(ThankYou);
+export default connect(mapStateToProps, 
+  { fetchLocation }
+)(ThankYou);

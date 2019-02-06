@@ -1,3 +1,5 @@
+import '@scss/app.scss';
+
 import React from 'react';
 import { 
   BrowserRouter as Router,
@@ -14,14 +16,11 @@ import Registry from './views/registry';
 import Rsvp from './views/rsvp';
 import ThankYou from './views/thankyou';
 
-import './scss/app.scss';
-
 WebFont.load({
   google: {
     families: ['Sanchez']
   }
 });
-
 
 const Routes = [
   { path: '/', component: Home },
