@@ -2,23 +2,20 @@ import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import soKind from '../images/sokind_logo.png';
-import Amazon from '../images/amazon-256.png';
+import soKind from '@images/sokind_logo.png';
+import Amazon from '@images/amazon-256.png';
 
 import PageHeader from '../components/page-header';
 import RegistryCard from '../components/registry-card';
-import * as actions from '../actions';
-
+import { fetchLocation } from '../actions';
 
 class Registry extends Component {
 
   componentDidMount() {
-    this.props.fetchAccommodations();
     this.props.fetchLocation();
   }
 
   render() {
-
     const { date, venue, city } = this.props.location;
 
     if (!date) {
@@ -54,7 +51,7 @@ class Registry extends Component {
 
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     location: state.location
   };
@@ -62,7 +59,6 @@ function mapStateToProps(state) {
 
 
 Registry.propTypes = {
-  fetchAccommodations: Proptypes.func.isRequired,
   fetchLocation: Proptypes.func.isRequired,
   location: Proptypes.object,
   date: Proptypes.string,
@@ -71,4 +67,6 @@ Registry.propTypes = {
   pageId: Proptypes.string
 };
 
-export default connect(mapStateToProps, actions)(Registry);
+export default connect(mapStateToProps, 
+  { fetchLocation }
+)(Registry);

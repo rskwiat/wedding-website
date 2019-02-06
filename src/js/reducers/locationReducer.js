@@ -2,11 +2,7 @@ import {
   FETCH_LOCATION,
 } from '../actions/types';
 
-const INIT_STATE = {
-  location: {}
-};
-
-export default (state = INIT_STATE, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case FETCH_LOCATION: 
       return action.payload

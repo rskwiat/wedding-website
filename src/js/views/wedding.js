@@ -7,7 +7,7 @@ import Accommodations from '../components/accommodations';
 import ButtermilkMap from '../components/map';
 import settings from '../config/settings';
 
-import * as actions from '../actions';
+import { fetchLocation, fetchAccommodations } from '../actions';
 
 class Wedding extends Component {
 
@@ -80,4 +80,6 @@ Wedding.propTypes = {
   accommodations: Proptypes.object,
 };
 
-export default connect(mapStateToProps, actions)(Wedding);
+export default connect(mapStateToProps, 
+  { fetchLocation, fetchAccommodations }
+)(Wedding);
