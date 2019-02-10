@@ -10,7 +10,10 @@ import { fetchLocation } from '../actions';
 class ThankYou extends Component {
   
   componentDidMount() {
-    this.props.fetchLocation();
+    const { location } = this.props;
+    if (Object.keys(location).length === 0) {
+      this.props.fetchLocation();
+    }
   }
 
   render() {

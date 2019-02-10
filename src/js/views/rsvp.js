@@ -5,22 +5,20 @@ import { connect } from 'react-redux';
 import PageHeader from '../components/page-header';
 import ContactForm from '../components/contactForm';
 
-import { fetchLocation } from '../actions';
+import { fetchLocation, submitForm } from '../actions';
 
 class Rsvp extends Component {
 
-  constructor(props) {
-    super(props);
-    this.submit = this.submit.bind(this);
-  }
-
   componentDidMount() {
-    this.props.fetchLocation();
+    const { location } = this.props;
+    if (Object.keys(location).length === 0) {
+      this.props.fetchLocation();
+    }    
   }
 
-  submit(values) {
+  submit = (values) => {
     this.props.submitForm(values);
-    this.props.history.push('/rsvp/thank-you');
+    // this.props.history.push('/rsvp/thank-you');
   }
 
   render() {
@@ -36,7 +34,6 @@ class Rsvp extends Component {
         <ContactForm title="RSVP" onSubmit={this.submit} />
       </div>
     );
-
   }
 }
 
@@ -50,7 +47,6 @@ Rsvp.propTypes = {
   history: Proptypes.object,
   location: Proptypes.object,
   fetchLocation: Proptypes.func.isRequired,
-  submitForm: Proptypes.func,
   pageId: Proptypes.string
 };
 

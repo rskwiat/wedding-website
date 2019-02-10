@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-const renderFields = ({ type, input, checked, label, meta: { error, touched } }) => {
+const renderFields = ({ type, input, checked, label }) => {
   if (type === 'radio') {
     return (
       <fieldset className={type}>

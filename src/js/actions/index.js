@@ -35,17 +35,18 @@ export const fetchStory = () => async (dispatch) => {
 };
 
 export const submitForm = (data) => (dispatch) => {
-  fetch('/api/rsvp', { 
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then((response) => { 
-    dispatch({
-      type: SUBMIT_FORM
-    });
-  });
+  console.log(data);
+  // fetch('/api/rsvp', { 
+  //   method: 'POST',
+  //   headers: {
+  //     'Accept': 'application/json, text/plain, */*',
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(data)
+  // }).then((response) => { 
+  //   dispatch({
+  //     type: SUBMIT_FORM
+  //   });
+  // });
 };
 
