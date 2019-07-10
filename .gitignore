@@ -1,7 +1,0 @@
-config
-coverage
-node_modules
-app
-build
-.DS_Store
-public
