@@ -1,0 +1,27 @@
+$medium: 768px;
+$large: 992px;
+$base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$orange: rgb(234, 128, 51);
+$white: #FFF;
+$gray-text: #333;
+$body-copy: #646464;
+$gray: #666;
+
+@mixin mediumScreen {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin small() {
+    @media only screen and (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+  @media (min-width: $large) {
+    @content;
+  }
+}
