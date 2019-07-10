@@ -2,10 +2,11 @@ import '@scss/app.scss';
 
 import React from 'react';
 import { 
-  BrowserRouter as Router,
+  Router,
   Route
 } from 'react-router-dom';
 import WebFont from 'webfontloader';
+import createHistory from 'history/createBrowserHistory';
 
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -18,7 +19,7 @@ WebFont.load({
 });
 
 const App = () => (
-  <Router>
+  <Router history={createHistory()}>
     <div>
       <Navigation />
       { Routes.map((route, i) => (

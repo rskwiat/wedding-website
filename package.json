@@ -57,6 +57,7 @@
     "css-loader": "^0.28.9",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
+    "eslint": "^5.15.3",
     "file-loader": "^1.1.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.2.2",
