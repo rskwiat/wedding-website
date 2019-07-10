@@ -15,7 +15,6 @@ WebFont.load({
   }
 });
 
-
 const App = () => (
   <Router>
     <div>
