@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route
 } from 'react-router-dom';
 import WebFont from 'webfontloader';
@@ -19,15 +19,17 @@ const App = () => (
   <Router>
     <div>
       <Navigation />
-
-      { Routes.map((route, i) => (
-        <Route
-          key={i}
-          exact
-          path={route.path}
-          component={route.component}
-        />
-      ))}
+      { Routes.map((route, i) => {
+        console.log(route);
+        return (
+          <Route
+            key={i}
+            exact
+            path={route.path}
+            component={route.component}
+          />
+        );
+      })}
       <Footer
         copyright="2018"
         email="rskwiat@gmail.com"

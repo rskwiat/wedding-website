@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from 'scss/navigation.module.scss';
 import Routes from 'constants/routes';
@@ -10,7 +11,7 @@ const Navigation = () => {
         {
           Routes.map((route, i) => {
             return (
-              <li key={i}><a href={route.path}>{route.title}</a></li>
+              <li key={i}><Link to={route.path}>{route.title}</Link></li>
             );
           })
         }
