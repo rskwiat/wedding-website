@@ -5,7 +5,6 @@ import styles from 'scss/wedding.module.scss';
 const Accommodations = (props) => {
   return (
     <div className={styles['accommodations']}>
-      <div className="row no-flex">
         <h2>
           <a 
             href={props.venue.url} 
@@ -19,9 +18,14 @@ const Accommodations = (props) => {
         <address>
           <p>{props.venue.address}, {props.venue.location}</p>
         </address>
-        <p>Tel: <a href={`tel:${props.venue.number}`}>{props.venue.number}</a></p>
-        {/* <Button link={props.venue.url} name={ `${props.venue.title} Website `} /> */}
-      </div>
+        <p>Tel: <a className={styles.tel} href={`tel:${props.venue.number}`}>{props.venue.number}</a></p>
+
+        <a 
+          className="btn" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          href={props.venue.url}>{ `${props.venue.title} Website `}
+        </a>
     </div>
   );
 }

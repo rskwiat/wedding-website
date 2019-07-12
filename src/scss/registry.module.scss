@@ -1,0 +1,45 @@
+@import 'variables';
+
+.registry {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mediumScreen {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.registry-card {
+	border: 1px solid rgba(0,0,0,0.3);
+	padding: 2rem;
+	box-shadow: 0 2rem 2rem rgba(0,0,0,0.08);
+	flex: 1;
+	margin: 0 0 5rem 0;
+	border-radius: 1rem;
+  
+  @include mediumScreen {
+		margin: 0 5rem 0 0rem;
+		max-width: 25%;    
+  }
+
+	&:last-child {
+		margin: 0;
+	}
+
+	.logo {
+		margin: 0 0 2rem 0;
+	}
+}

@@ -7,7 +7,7 @@
 
 .accommodations {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
   padding: 0 2rem;
   width: 100%;
 
@@ -15,20 +15,13 @@
     color: $orange;
   }
 
-  a {
+  .tel {
     color: $orange;
   }
 
 	address {
 		margin: 0 0 2rem 0;
 		font-size: 1.4rem;
-	}
-	
-	.btn {
-		@include mediumScreen {
-			width: auto;
-			padding: 1.2rem 2.4rem;
-		}
 	}
 }
 

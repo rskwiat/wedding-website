@@ -52,6 +52,28 @@ a {
 	padding: 0 2rem;
 }
 
+.img-responsive {
+	width: 100%;
+	max-width: 100%;
+}
+
+.btn {
+	background: $orange;
+	display: inline-block;
+	color: $white;
+	width: 100%;
+	text-align: center;
+	border: 0;
+	border-radius: 1rem;
+	padding: 1.2rem 1.2rem;
+	font-size: 1.6rem;
+	letter-spacing: 0.08rem;
+	transition: background 350ms ease-in-out;
+	&:hover{
+		background: darken($orange, 15%);
+	}
+}
+
 footer {
 	margin-top: 8rem;
 	background: url('../images/footer.jpg') center center no-repeat;
