@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8387d944.chunk.css",
-    "main.js": "/static/js/main.bee0a53f.chunk.js",
-    "main.js.map": "/static/js/main.bee0a53f.chunk.js.map",
+    "main.css": "/static/css/main.29666f1b.chunk.css",
+    "main.js": "/static/js/main.c5ad11ad.chunk.js",
+    "main.js.map": "/static/js/main.c5ad11ad.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.a2ca67f6.chunk.js": "/static/js/2.a2ca67f6.chunk.js",
-    "static/js/2.a2ca67f6.chunk.js.map": "/static/js/2.a2ca67f6.chunk.js.map",
+    "static/js/2.8df17d2f.chunk.js": "/static/js/2.8df17d2f.chunk.js",
+    "static/js/2.8df17d2f.chunk.js.map": "/static/js/2.8df17d2f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a72183b960c04f6e06ad2e06e7fb3c1c.js": "/precache-manifest.a72183b960c04f6e06ad2e06e7fb3c1c.js",
+    "precache-manifest.ae6cc16abdda2744352462a41c32d282.js": "/precache-manifest.ae6cc16abdda2744352462a41c32d282.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8387d944.chunk.css.map": "/static/css/main.8387d944.chunk.css.map",
+    "static/css/main.29666f1b.chunk.css.map": "/static/css/main.29666f1b.chunk.css.map",
     "static/media/header.module.scss": "/static/media/banner.9c224e75.jpg",
     "static/media/index.scss": "/static/media/footer.be47ae7f.jpg",
+    "static/media/sokind_logo.png": "/static/media/sokind_logo.4271a7f3.png",
     "static/media/home.module.scss": "/static/media/welcome-photo-hd.66303aa9.jpg"
   }
 }
