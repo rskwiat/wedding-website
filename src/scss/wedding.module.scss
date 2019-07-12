@@ -1,0 +1,34 @@
+@import 'variables';
+
+.location-header {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.accommodations {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+
+  h2 a {
+    color: $orange;
+  }
+
+  a {
+    color: $orange;
+  }
+
+	address {
+		margin: 0 0 2rem 0;
+		font-size: 1.4rem;
+	}
+	
+	.btn {
+		@include mediumScreen {
+			width: auto;
+			padding: 1.2rem 2.4rem;
+		}
+	}
+}
+
