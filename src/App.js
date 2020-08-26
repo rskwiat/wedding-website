@@ -20,7 +20,6 @@ const App = () => (
     <div>
       <Navigation />
       { Routes.map((route, i) => {
-        console.log(route);
         return (
           <Route
             key={i}
